@@ -25,7 +25,7 @@
     "pre:build:check": "yarn prettier && yarn lint && yarn test:packages",
     "publish:all": "yarn pre:build:check && yarn prod:build:packages && lerna publish --exact",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "build:storybook": "build-storybook -o ./build-storybook",
+    "build:storybook": "build-storybook -o ./storybook-static",
     "lint": "lerna run lint --stream",
     "check:prettier": "prettier -l 'packages/**/src/**/*.{ts,tsx,mdx}' --ignore-path .gitignore",
     "prettier": "prettier --write 'packages/**/src/**/*.{ts,tsx,mdx}' --ignore-path .gitignore",
