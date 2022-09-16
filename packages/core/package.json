@@ -1,5 +1,5 @@
 {
-  "name": "@obrigado-senior/core",
+  "name": "@obrigadosenior/core",
   "version": "0.0.3",
   "description": "Obrigado Senior Design System - Core",
   "author": "Johan Sjöberg",
@@ -29,8 +29,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigado-senior/system": "0.0.3",
-    "@obrigado-senior/theme": "0.0.3"
+    "@obrigadosenior/system": "0.0.3",
+    "@obrigadosenior/theme": "0.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.6",
@@ -45,5 +45,5 @@
       "./setupTests.ts"
     ]
   },
-  "gitHead": "1708ccdbfccc75759846fbdbe65d22fe0826b8ad"
+  "gitHead": "c1adb13e396ad1813a46ba09e6d6627471b8a1ca"
 }

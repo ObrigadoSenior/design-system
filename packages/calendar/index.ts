@@ -1,4 +1,4 @@
 import { calendarTheme } from './src';
-import { AddTheme } from '@obrigado-senior/theme';
+import { AddTheme } from '@obrigadosenior/theme';
 AddTheme && AddTheme({ theme: calendarTheme });
 export * from './src';

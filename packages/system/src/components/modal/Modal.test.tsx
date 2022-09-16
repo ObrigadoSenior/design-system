@@ -1,10 +1,10 @@
-import { close } from '@obrigado-senior/icons';
+import { close } from '@obrigadosenior/icons';
 import { cleanup, render, fireEvent, waitFor } from '@testing-library/react';
 import React from 'react';
 import { Modal as TestComponent } from '.';
 import { OverrideWithOptional } from '../../../../../utils';
 import { IModalProps as TestComponentProps } from '../../models';
-import { Text } from '@obrigado-senior/core';
+import { Text } from '@obrigadosenior/core';
 
 type DefaultProps = Pick<TestComponentProps, 'title' | 'open' | 'onClick' | 'closeIcon'>;
 const defaultProps: DefaultProps = {

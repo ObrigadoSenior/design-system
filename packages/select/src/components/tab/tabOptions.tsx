@@ -1,6 +1,6 @@
 import React from 'react';
 import { ITabOptionsProps } from '../../models';
-import { Text } from '@obrigado-senior/core';
+import { Text } from '@obrigadosenior/core';
 import './tabStyle.css';
 
 export const TabOptions = ({ options = [], onOptionsClick, activeOption }: ITabOptionsProps): JSX.Element => (

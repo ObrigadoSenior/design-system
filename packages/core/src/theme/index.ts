@@ -1,4 +1,4 @@
-import { ITheme } from '@obrigado-senior/theme';
+import { ITheme } from '@obrigadosenior/theme';
 import { fontSize, travelColors, fontWeight, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, modernBlue, himmel, tjara, silver, silverLight, moln } = travelColors || {};

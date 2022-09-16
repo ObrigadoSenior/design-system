@@ -1,6 +1,6 @@
 import React from 'react';
 import { ICheckboxProps } from '../../models';
-import { Text } from '@obrigado-senior/core';
+import { Text } from '@obrigadosenior/core';
 import './checkboxStyle.css';
 
 export const Checkbox: React.FC<ICheckboxProps> = ({ className = '', label, onChange, ...rest }) => {

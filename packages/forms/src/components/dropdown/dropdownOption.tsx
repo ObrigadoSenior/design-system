@@ -1,6 +1,6 @@
 import React from 'react';
 import { IDropdownOption, IDropdownOptionsProps } from '../../models/components/dropdown';
-import { Text } from '@obrigado-senior/core';
+import { Text } from '@obrigadosenior/core';
 import './dropdownStyle.css';
 
 export const DropdownOption = ({

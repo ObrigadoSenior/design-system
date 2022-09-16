@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { IModalProps } from '../../models';
-import { Button } from '@obrigado-senior/core';
+import { Button } from '@obrigadosenior/core';
 import './modalStyle.css';
 
 const useWindowSize = () => {

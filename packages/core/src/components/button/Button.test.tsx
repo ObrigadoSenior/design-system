@@ -1,4 +1,4 @@
-import { close } from '@obrigado-senior/icons';
+import { close } from '@obrigadosenior/icons';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Button as TestComponent } from '.';

@@ -1,4 +1,4 @@
-import { arrowLeft, arrowRight } from '@obrigado-senior/icons';
+import { arrowLeft, arrowRight } from '@obrigadosenior/icons';
 import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 import React from 'react';
 import { DatePicker as TestComponent } from '.';

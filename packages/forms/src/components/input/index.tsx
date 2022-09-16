@@ -1,4 +1,4 @@
-import { Icon } from '@obrigado-senior/core';
+import { Icon } from '@obrigadosenior/core';
 import React, { useEffect, useState } from 'react';
 import { IInputProps } from '../../models';
 import './inputStyle.css';

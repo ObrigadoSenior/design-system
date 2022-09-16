@@ -1,4 +1,4 @@
-import { IIconProps } from '@obrigado-senior/core';
+import { IIconProps } from '@obrigadosenior/core';
 import { ReactElement } from 'react';
 
 export type IModalProps = {

@@ -1,4 +1,4 @@
 import { systemTheme } from './src';
-import { AddTheme } from '@obrigado-senior/theme';
+import { AddTheme } from '@obrigadosenior/theme';
 AddTheme && AddTheme({ theme: systemTheme });
 export * from './src';

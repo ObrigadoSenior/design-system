@@ -1,4 +1,4 @@
-import { IIconProps } from '@obrigado-senior/core';
+import { IIconProps } from '@obrigadosenior/core';
 import { IInputProps } from './input';
 
 export type IDropdownOption = {
