@@ -1,0 +1,42 @@
+import { Text } from './';
+import { StoriesDivider } from '../../../../../.storybook/storiesTheme/StoriesDivider';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Text/Header" component={Text} />
+
+# Atoms
+
+## Header
+
+> `Header` as a core element. Has the function as building block for molecules or organisms.
+
+# Preview
+
+<Preview>
+  <Story name="Header">
+    <StoriesDivider labels={['XX-Large', 'X-Large', 'Large', 'Medium', 'Small', 'XX-Small']}>
+      <Text tag="h1" size="xxl" weight="bold">
+        h1 Desktop page headline - what the page is about
+      </Text>
+      <Text tag="h2" size="xl" weight="bold">
+        h2 Dekstop section headline - what the section is about
+      </Text>
+      <Text tag="h1" size="l" weight="bold">
+        h1 Mobile page headline - what the page is about
+      </Text>
+      <Text tag="h2" size="m" weight="bold">
+        h2 Mobile section headline - what the section is about
+      </Text>
+      <Text tag="h3" size="s" weight="bold">
+        h3 Headline in component
+      </Text>
+      <Text tag="h4" size="xxs" weight="bold">
+        h4 Headlines in footer
+      </Text>
+    </StoriesDivider>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Text} />

@@ -1,0 +1,43 @@
+import { placeholder } from '../../../../../icons';
+import { SettingButton } from './';
+import { Button } from '.././';
+import { StoriesDivider } from '../../../../../../.storybook/storiesTheme/StoriesDivider';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Button" component={SettingButton} />
+
+# Atoms
+
+## Setting Button
+
+> `Setting Button` as a core element. Has the function as building block for molecules or organisms.
+
+# Preview
+
+<Preview>
+  <Story name="Setting Button">
+    <StoriesDivider labels={['Default']}>
+      <SettingButton
+        settingTitle="Settings button"
+        closeIcon={{ icon: placeholder, size: 'm' }}
+        settingIcon={{ icon: placeholder, size: 'm' }}
+        options={
+          <ul>
+            <li key="option1">
+              <Button
+                buttonType="primary"
+                leftIcon={{ placeholder, size: 'm' }}
+                label="Option 1"
+                onClick={() => console.log()}
+              />
+            </li>
+          </ul>
+        }
+      />
+    </StoriesDivider>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={SettingButton} />

@@ -1,0 +1,78 @@
+:root {
+  --radio-width: 20px;
+  --radio-height: 20px;
+}
+
+.radio-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: var(--radio-height);
+  width: var(--radio-width);
+  border-radius: var(--radio-border-radius);
+  border: 2px solid var(--radio-border-color);
+}
+
+.radio-label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: var(--radio-height);
+  user-select: none;
+  cursor: pointer;
+  color: var(--radio-label-color);
+  padding-left: 10px;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio-input:checked + .radio-checkmark {
+  background-color: var(--radio-bg-color);
+  border: 2px solid var(--radio-bg-color);
+}
+
+.radio-input:checked + .radio-checkmark:after {
+  content: '';
+  width: 53%;
+  height: 53%;
+  background-color: var(--radio-checkmark-color);
+  border-radius: var(--radio-border-radius);
+}
+
+.radio-input:disabled {
+  background-color: var(--radio-checkmark-disabled-bg-color);
+  cursor: default;
+  color: var(--radio-disabled-label-color);
+}
+
+.radio-input:disabled + .radio-checkmark {
+  background-color: var(--radio-checkmark-disabled-bg-color);
+  border: 2px solid var(--radio-checkmark-disabled-border-color);
+  cursor: default;
+}
+
+.radio-input:disabled ~ .radio-label {
+  color: var(--radio-disabled-label-color);
+  cursor: default;
+}
+
+.radio-input:disabled:not(:checked) + .radio-checkmark {
+  background-color: transparent;
+  border: 2px solid var(--radio-checkmark-disabled-border-color);
+}
+
+.radio-input:hover:not(:disabled) + .radio-checkmark ~ .radio-label {
+  opacity: 0.75;
+}
+
+.checkbox-input:hover:not(:disabled) + .radio-checkmark {
+  opacity: 0.75;
+}

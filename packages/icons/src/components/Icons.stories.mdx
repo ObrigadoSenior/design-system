@@ -1,0 +1,52 @@
+import { Icon } from '@obrigado-senior/core';
+import * as stenaicons from './';
+import { StoriesDivider } from '../../../../.storybook/storiesTheme/StoriesDivider';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Icons" component={Icon} />
+
+# Atoms
+
+## Icons
+
+> `Icons` as a core element. Has the function as building block for molecules or organisms.
+
+<ul>
+  <li>Icons have a size of 24px</li>
+  <li>Icons should in most cases be accompanied by a label to ensure the user understands it's functionality</li>
+</ul>
+
+<strong>Do:</strong>
+
+<ul>
+  <li>Add icons to highlighted features list.</li>
+  <li>Use icons in tabs for extra attention.</li>
+  <li>Use the correct icon created for each feature.</li>
+  <li>If there is no specific icon for the feature, use a similar one.</li>
+</ul>
+
+<strong>Don't:</strong>
+
+<ul>
+  <li>No icons should be used right into the body text.</li>
+  <li>Avoid using the same icon repeatedly for different features.</li>
+  <li>Avoid icons in images.</li>
+</ul>
+
+# Preview
+
+<Preview>
+  <Story name="Icons">
+    {
+      <StoriesDivider labels={Object.keys(stenaicons)}>
+        {Object.values(stenaicons).map((value) => (
+          <Icon icon={value} size="m" />
+        ))}
+      </StoriesDivider>
+    }
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Icon} />

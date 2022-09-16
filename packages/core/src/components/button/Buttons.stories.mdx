@@ -1,0 +1,44 @@
+import { Button } from './';
+import { StoriesDivider } from '../../../../../.storybook/storiesTheme/StoriesDivider';
+import { placeholder } from '../../../../icons';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Core/Button/CTA" component={Button} />
+
+# Atoms
+
+## Buttons
+
+> `Buttons` as a core element. Has the function as building blocks for molecules or organisms.
+
+<ul>
+  <li>Comes both with and without emblem.</li>
+  <li>Text + Emblem is always centered.</li>
+  <li>Primary colour is Red and secondary is white.</li>
+  <li>Booking button is always red.</li>
+  <li>Badge button is always blue.</li>
+  <li>
+    The buttons width tend to be adjusted to the text amount on desktop, but have full width on mobile. Sometimes the
+    grid sets the width aswell.
+  </li>
+  <li>On mouse hover, the arrow emblem sligtly moves to the right.</li>
+  <li>20 pixels margins to the left and right should be applied on Primary and Secondary buttons.</li>
+</ul>
+
+# Preview
+
+<Preview>
+  <Story name="CTA">
+    <StoriesDivider labels={['Primary', 'Secondary', 'Badge', 'Flat', 'Icon']}>
+      <Button buttonType="primary" label="See all destinations" />
+      <Button buttonType="secondary" label="Back to attractions" />
+      <Button buttonType="badge" label="Denmark" />
+      <Button buttonType="flat" label="Denmark" />
+      <Button buttonType="icon" leftIcon={{ icon: placeholder }} label="" />
+    </StoriesDivider>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Button} />
