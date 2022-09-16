@@ -1,6 +1,6 @@
 {
   "name": "obrigadosenior",
-  "private": false,
+  "private": true,
   "version": "0.0.4",
   "description": "Obrigado Senior Design System (OSDS)",
   "author": "Johan Sjöberg",
@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier && yarn lint && yarn test:packages"
+      "pre-push": "yarn prettier && yarn lint && yarn test:packages && yarn build:storybook"
     }
   },
   "scripts": {
