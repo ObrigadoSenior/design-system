@@ -1,0 +1,13 @@
+.break:not(:first-of-type) {
+  width: 100%;
+  margin: var(--stories-size-l) 0 var(--stories-size-m) 0;
+}
+
+.break:first-of-type {
+  width: 100%;
+  margin: 0 0 var(--stories-size-m) 0;
+}
+
+.break span h5 {
+  margin-bottom: var(--stories-size-s);
+}
