@@ -1,0 +1,27 @@
+import { Input } from './';
+import { StoriesDivider } from '../../../../../.storybook/storiesTheme/StoriesDivider';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Forms/Input" component={Input} />
+
+# Atoms
+
+## Input
+
+> `Input` as a core element. Has the function as building block for molecules or organisms.
+
+# Preview
+
+<Preview>
+  <Story name="Input">
+    <StoriesDivider labels={['Standard', 'Default value', 'Disabled']}>
+      <Input title="Input" placeholder="Placeholder" onChange={() => console.log()} />
+      <Input title="Input" defaultValue="Default value" placeholder="Placeholder" onChange={() => console.log()} />
+      <Input title="Input" disabled placeholder="Placeholder" onChange={() => console.log()} />
+    </StoriesDivider>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Input} />

@@ -1,0 +1,137 @@
+.input-div {
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  min-width: var(--metrics-min-width);
+  background: var(--input-bg-color);
+  border-radius: var(--input-border-radius);
+  border: 1px solid var(--input-border-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-div.input-height-none {
+  height: var(--metrics-size-none);
+}
+
+.input-div.input-height-xxxs {
+  height: var(--metrics-size-xxxs);
+}
+
+.input-div.input-height-xxs {
+  height: var(--metrics-size-xxs);
+}
+
+.input-div.input-height-xs {
+  height: var(--metrics-size-xs);
+}
+
+.input-div.input-height-s {
+  height: var(--metrics-size-s);
+}
+
+.input-div.input-height-m {
+  height: var(--metrics-size-m);
+}
+
+.input-div.input-height-l {
+  height: var(--metrics-size-l);
+}
+
+.input-div.input-height-xl {
+  height: var(--metrics-size-xl);
+}
+
+.input-div.input-height-xxl {
+  height: var(--metrics-size-xxl);
+}
+
+.input-div .icon {
+  position: absolute;
+  z-index: 1;
+}
+
+.input-div .icon-left {
+  left: 7.5px;
+}
+
+.input-div .icon-right {
+  right: 7.5px;
+}
+
+.input:disabled {
+  background: var(--input-disabled-bg-color);
+  border: 1px solid var(--input-disabled-border-color);
+  cursor: default;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.input {
+  color: var(--input-text-color);
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: var(--input-border-radius);
+  font-size: 16px;
+  padding: var(--input-no-icon-padding) var(--input-no-icon-padding) 0px var(--input-no-icon-padding);
+  box-sizing: border-box;
+  cursor: text;
+}
+
+.input::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.input-div.disabled {
+  border-color: var(--input-disabled-border-color);
+  border-bottom: none;
+}
+
+.input-div.disabled .input::placeholder {
+  color: var(--input-disabled-text-color);
+}
+
+.input-div.disabled .icon svg path {
+  fill: var(--input-disabled-text-color);
+}
+
+.input-div.disabled .input-title {
+  color: var(--input-disabled-title-color);
+}
+
+.input-wrapper .input-title {
+  color: var(--input-title-color);
+  font-size: 14px;
+  font-weight: 100;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
+  padding-left: var(--input-no-icon-padding);
+}
+
+.input.icons-left,
+.input-title.icons-left {
+  padding-left: var(--input-with-icon-padding);
+}
+
+.input.icons-right,
+.input-title.icons-right {
+  padding-right: var(--input-with-icon-padding);
+  padding-left: var(--input-no-icon-padding);
+}
+
+.input.icons-right-left,
+.input-title.icons-right-left {
+  padding-left: var(--input-with-icon-padding);
+  padding-right: var(--input-with-icon-padding);
+}

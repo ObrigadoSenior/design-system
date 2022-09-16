@@ -1,0 +1,32 @@
+{
+  "name": "@obrigado-senior/icons",
+  "version": "0.0.1",
+  "description": "Obrigado Senior Design System - Icons",
+  "author": "Johan Sjöberg",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "unsafe-perm": true
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "clean": "rm -rf dist",
+    "prepare": "yarn run build",
+    "postpublish": "yarn clean",
+    "lint": "eslint --ignore-path ../../.gitignore --fix"
+  },
+  "devDependencies": {
+    "rollup": "^2.27.1",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
+  },
+  "gitHead": "5426c90b1b2d1ebd34371eee000b0192767b7c74"
+}

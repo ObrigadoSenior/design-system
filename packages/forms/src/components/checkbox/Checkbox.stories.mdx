@@ -1,0 +1,28 @@
+import { Checkbox } from './';
+import { StoriesDivider } from '../../../../../.storybook/storiesTheme/StoriesDivider';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title="Forms/Checkbox" component={Checkbox} />
+
+# Atoms
+
+## Checkbox
+
+> `Checkbox` as a core element. Has the function as building block for molecules or organisms.
+
+# Preview
+
+<Preview>
+  <Story name="Checkbox">
+    <StoriesDivider labels={['Unchecked', 'Checked', 'Unchecked - disabled', 'Checked - disabled']}>
+      <Checkbox label="All destinations" onChange={() => console.log()} />
+      <Checkbox checked={true} label="All destinations" onChange={() => console.log()} />
+      <Checkbox disabled label="All destinations" onChange={() => console.log()} />
+      <Checkbox checked={true} disabled label="All destinations" onChange={() => console.log()} />
+    </StoriesDivider>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Checkbox} />
