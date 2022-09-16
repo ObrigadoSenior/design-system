@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn prettier && yarn lint && yarn test:packages && yarn build:storybook"
+      "pre-push": "yarn prettier && yarn lint && yarn test:packages"
     }
   },
   "scripts": {
