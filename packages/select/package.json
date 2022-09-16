@@ -1,6 +1,6 @@
 {
   "name": "@obrigado-senior/select",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Obrigado Senior Design System - Select",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -29,8 +29,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigado-senior/core": "0.0.2",
-    "@obrigado-senior/theme": "0.0.2"
+    "@obrigado-senior/core": "0.0.3",
+    "@obrigado-senior/theme": "0.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.6",
@@ -44,5 +44,6 @@
     "setupFilesAfterEnv": [
       "./setupTests.ts"
     ]
-  }
+  },
+  "gitHead": "1708ccdbfccc75759846fbdbe65d22fe0826b8ad"
 }

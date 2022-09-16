@@ -1,6 +1,6 @@
 {
   "name": "@obrigado-senior/calendar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Obrigado Senior Design System - Calendar",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigado-senior/theme": "0.0.2"
+    "@obrigado-senior/theme": "0.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.6",
@@ -44,5 +44,5 @@
       "./setupTests.ts"
     ]
   },
-  "gitHead": "bc6324642ee6df4a7731a84258d1a95a7b43ea99"
+  "gitHead": "1708ccdbfccc75759846fbdbe65d22fe0826b8ad"
 }
