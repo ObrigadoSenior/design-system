@@ -1,6 +1,6 @@
 {
-  "name": "@obrigado-senior/theme",
-  "version": "0.0.1",
+  "name": "@obrigadosenior/theme",
+  "version": "0.0.4",
   "description": "Obrigado Senior Design System - Theme",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -41,5 +41,5 @@
       "./setupTests.ts"
     ]
   },
-  "gitHead": "bc6324642ee6df4a7731a84258d1a95a7b43ea99"
+  "gitHead": "efd98ded0701ee0d87f941912f8a301db63c0353"
 }

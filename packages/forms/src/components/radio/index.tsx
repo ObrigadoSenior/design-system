@@ -1,6 +1,6 @@
 import React from 'react';
 import { IRadioProps } from '../../models';
-import { Text } from '@obrigado-senior/core';
+import { Text } from '@obrigadosenior/core';
 import './radioStyle.css';
 
 export const Radio: React.FC<IRadioProps> = ({ className = '', label, onChange, ...rest }) => {

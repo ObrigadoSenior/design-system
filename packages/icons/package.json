@@ -1,6 +1,6 @@
 {
-  "name": "@obrigado-senior/icons",
-  "version": "0.0.1",
+  "name": "@obrigadosenior/icons",
+  "version": "0.0.4",
   "description": "Obrigado Senior Design System - Icons",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -28,5 +28,5 @@
     "react": ">=16.8.6",
     "react-dom": ">=16.8.6"
   },
-  "gitHead": "5426c90b1b2d1ebd34371eee000b0192767b7c74"
+  "gitHead": "efd98ded0701ee0d87f941912f8a301db63c0353"
 }

@@ -1,4 +1,4 @@
-import { ITextProps } from '@obrigado-senior/core';
+import { ITextProps } from '@obrigadosenior/core';
 
 export type ITabOption = {
   title: string;

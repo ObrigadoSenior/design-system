@@ -1,10 +1,10 @@
-import { ITheme } from '@obrigado-senior/theme';
+import { ITheme } from '@obrigadosenior/theme';
 import { fontSize, travelColors, fontWeight, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, modernBlue, himmel, tjara, silver, silverLight, moln } = travelColors || {};
-const { none, xxxsmall, xxsmall, xsmall, small, medium, large, xlarge } = sizes || {};
+const { none, xsmall, small, medium, large, xlarge } = sizes || {};
 const { light: fwLight, regular: fwRegular, medium: fwMedium, bold: fwBold } = fontWeight || {};
-const { xxxs, xxs, xs, s, m, l, xl, xxl } = fontSize || {};
+const { xs, s, m, l, xl } = fontSize || {};
 
 export const coreTheme: ITheme = {
   metrics,
@@ -14,7 +14,7 @@ export const coreTheme: ITheme = {
       textColor: moln,
       borderColor: modernRed,
       borderRadius: `${large}px`,
-      padding: `${xxsmall}px ${small}px`,
+      padding: `${xsmall}px ${small}px`,
       height: `${xlarge}px`,
     },
     flat: {
@@ -30,7 +30,7 @@ export const coreTheme: ITheme = {
       textColor: tjara,
       borderColor: tjara,
       borderRadius: `${small}px`,
-      padding: `${xxsmall}px ${small}px`,
+      padding: `${xsmall}px ${small}px`,
       height: `${xlarge}px`,
     },
     badge: {
@@ -38,7 +38,7 @@ export const coreTheme: ITheme = {
       textColor: moln,
       borderColor: modernBlue,
       borderRadius: `${small}px`,
-      padding: `${xxsmall}px ${xsmall}px`,
+      padding: `${xsmall}px ${xsmall}px`,
       height: `${small}px`,
     },
     icon: {
@@ -54,14 +54,11 @@ export const coreTheme: ITheme = {
     primaryColor: tjara,
     secondaryColor: moln,
     disabledColor: silver,
-    fontSizeXxxs: xxxs,
-    fontSizeXxs: xxs,
     fontSizeXs: xs,
     fontSizeS: s,
     fontSizeM: m,
     fontSizeL: l,
     fontSizeXl: xl,
-    fontSizeXxl: xxl,
     fontWeightLight: `${fwLight}`,
     fontWeightRegular: `${fwRegular}`,
     fontWeightMedium: `${fwMedium}`,
@@ -71,6 +68,6 @@ export const coreTheme: ITheme = {
     borderRadius: `${xsmall}px`,
   },
   price: {
-    padding: `${xxsmall}px`,
+    padding: `${xsmall}px`,
   },
 };

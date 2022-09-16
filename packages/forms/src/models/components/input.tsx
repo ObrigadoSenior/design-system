@@ -1,4 +1,4 @@
-import { IIconProps } from '@obrigado-senior/core';
+import { IIconProps } from '@obrigadosenior/core';
 import { size } from '../../../../../utils';
 
 export type IInputProps = {

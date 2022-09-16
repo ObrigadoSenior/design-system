@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Button } from '../index';
 import { IButtonProps } from '../../../models';
-import { Modal, IModalProps } from '@obrigado-senior/system';
+import { Modal, IModalProps } from '@obrigadosenior/system';
 
 export type ISettingButton = {
   settingTitle: string;

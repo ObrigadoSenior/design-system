@@ -1,4 +1,4 @@
-import { close } from '@obrigado-senior/icons';
+import { close } from '@obrigadosenior/icons';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useFilterOptions } from './useFilterOptions';
 
