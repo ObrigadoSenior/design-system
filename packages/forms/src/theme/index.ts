@@ -2,7 +2,7 @@ import { ITheme } from '@obrigado-senior/theme';
 import { travelColors, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, tjara, silver, silverLight, moln } = travelColors || {};
-const { xxsmall, small, large, xxlarge } = sizes || {};
+const { xsmall, small, large, xlarge } = sizes || {};
 
 export const formsTheme: ITheme = {
   metrics,
@@ -10,7 +10,7 @@ export const formsTheme: ITheme = {
     backgroundColor: moln,
     textColor: tjara,
     borderColor: silver,
-    borderRadius: `${xxsmall}px`,
+    borderRadius: `${xsmall}px`,
     disabledBackgroundColor: silverLight,
     disabledTextColor: silver,
     disabledBorderColor: silverLight,
@@ -30,7 +30,7 @@ export const formsTheme: ITheme = {
       hoverColor: silver,
       labelColor: tjara,
       disabledLabelColor: silver,
-      borderRadius: `${xxsmall}px`,
+      borderRadius: `${xsmall}px`,
       borderColor: silver,
       disabledBorderColor: silver,
     },
@@ -41,14 +41,14 @@ export const formsTheme: ITheme = {
       hoverColor: silver,
       labelColor: tjara,
       disabledLabelColor: silver,
-      borderRadius: `${xxlarge}px`,
+      borderRadius: `${xlarge}px`,
       borderColor: silver,
       disabledBorderColor: silver,
     },
   },
   dropdown: {
     content: {
-      borderRadius: `${xxsmall}px`,
+      borderRadius: `${xsmall}px`,
       height: '300px',
       transitionSpeed: '0.5s',
       backgroundColor: moln,

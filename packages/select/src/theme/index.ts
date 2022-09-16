@@ -2,7 +2,7 @@ import { ITheme } from '@obrigado-senior/theme';
 import { travelColors, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, tjara, silver, silverLight } = travelColors || {};
-const { xxxsmall, small } = sizes || {};
+const { xsmall, small } = sizes || {};
 
 export const selectTheme: ITheme = {
   metrics,
@@ -12,6 +12,6 @@ export const selectTheme: ITheme = {
     activeColor: modernRed,
     borderColor: silver,
     gap: `${small}px`,
-    borderWidth: `${xxxsmall}px`,
+    borderWidth: `${xsmall}px`,
   },
 };

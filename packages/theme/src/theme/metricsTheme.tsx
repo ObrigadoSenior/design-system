@@ -13,6 +13,7 @@ export const setMetricsTheme = ({ metrics, style }: ISetMetricsTheme): void => {
       style.setProperty('--metrics-max-width', width.max);
     }
     if (sizes) {
+      style.setProperty('--metrics-size-none', sizes.sizeNone);
       style.setProperty('--metrics-size-xs', sizes.sizeXs);
       style.setProperty('--metrics-size-s', sizes.sizeS);
       style.setProperty('--metrics-size-m', sizes.sizeM);

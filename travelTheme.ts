@@ -1,24 +1,18 @@
 export const sizes = {
   none: 0,
-  xxxsmall: 3,
-  xxsmall: 6,
   xsmall: 10,
   small: 20,
   medium: 30,
   large: 40,
   xlarge: 60,
-  xxlarge: 90,
 };
 
 export const fontSize = {
-  xxxs: '14px',
-  xxs: '16px',
   xs: '18px',
   s: '20px',
   m: '30px',
   l: '35px',
   xl: '40px',
-  xxl: '50px',
 };
 
 export const travelColors = {
@@ -58,19 +52,16 @@ export const fontWeight = {
   bold: 700,
 };
 
-const { none, xxxsmall, xxsmall, xsmall, small, medium, large, xlarge, xxlarge } = sizes;
+const { none, xsmall, small, medium, large, xlarge } = sizes;
 
 export const metrics = {
   width: { min: '300px', max: '1170px' },
   sizes: {
     sizeNone: `${none}px`,
-    sizeXxxs: `${xxxsmall}px`,
-    sizeXxs: `${xxsmall}px`,
     sizeXs: `${xsmall}px`,
     sizeS: `${small}px`,
     sizeM: `${medium}px`,
     sizeL: `${large}px`,
     sizeXl: `${xlarge}px`,
-    sizeXxl: `${xxlarge}px`,
   },
 };

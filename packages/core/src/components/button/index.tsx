@@ -8,7 +8,7 @@ export const Button = ({
   label,
   buttonType,
   size = 'm',
-  labelSize = 'xxs',
+  labelSize = 'xs',
   fullWidth = false,
   leftIcon,
   rightIcon,

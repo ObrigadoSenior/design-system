@@ -4,6 +4,7 @@ export type TThemeMetrics = {
     max: string;
   };
   sizes: {
+    sizeNone: string;
     sizeXs: string;
     sizeS: string;
     sizeM: string;
