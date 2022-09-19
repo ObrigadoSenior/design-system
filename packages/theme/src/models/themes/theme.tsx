@@ -8,8 +8,8 @@ import { TThemeDropdown } from './dropdown';
 import { TThemeText } from './text';
 import { TThemeTab } from './tab';
 import { TThemeImage } from './image';
-import { TThemePrice } from './price';
 import { TThemeModal } from './modal';
+import { TThemeSystem } from './system';
 
 export type ITheme = {
   metrics?: TThemeMetrics;
@@ -30,6 +30,6 @@ export type ITheme = {
   datePicker?: TThemeDatePicker;
   dropdown?: TThemeDropdown;
   tab?: TThemeTab;
-  price?: TThemePrice;
   modal?: TThemeModal;
+  system?: TThemeSystem;
 };

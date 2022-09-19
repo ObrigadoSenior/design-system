@@ -28,7 +28,6 @@ Components that are used in a wide range of possible implementation. Mainly smal
 > - Icon
 > - Image
 > - Modal
-> - Price
 > - Tab
 > - Text
 

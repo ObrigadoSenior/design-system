@@ -76,9 +76,6 @@ describe('Theme', () => {
   test('sets image', () => {
     expect(getStyle('--image-border-radius')).toBeTruthy();
   });
-  test('sets price', () => {
-    expect(getStyle('--price-padding')).toBeTruthy();
-  });
   test('sets modal', () => {
     expect(getStyle('--modal-color')).toBeTruthy();
     expect(getStyle('--modal-border-color')).toBeTruthy();

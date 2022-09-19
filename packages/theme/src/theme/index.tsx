@@ -9,14 +9,15 @@ import { setRadioTheme } from './radioTheme';
 import { setTextTheme } from './textTheme';
 import { setTabTheme } from './tabTheme';
 import { setImageTheme } from './imageTheme';
-import { setPriceTheme } from './priceTheme';
 import { setModalTheme } from './modalTheme';
+import { setSystemTheme } from './systemTheme';
 
 export const AddTheme = ({ theme }: IAddTheme): void => {
   const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+
   if (canUseDOM) {
     const { style } = document.documentElement || {};
-    const { metrics, button, text, image, input, selectors, datePicker, dropdown, tab, price, modal } = theme || {};
+    const { metrics, button, text, image, input, selectors, datePicker, dropdown, tab, modal, system } = theme || {};
 
     const { radio, checkbox } = selectors || {};
 
@@ -30,7 +31,7 @@ export const AddTheme = ({ theme }: IAddTheme): void => {
     if (text) setTextTheme({ text, style });
     if (tab) setTabTheme({ tab, style });
     if (image) setImageTheme({ image, style });
-    if (price) setPriceTheme({ price, style });
     if (modal) setModalTheme({ modal, style });
+    if (system) setSystemTheme({ system, style });
   }
 };
