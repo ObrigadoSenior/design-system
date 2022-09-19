@@ -13,21 +13,24 @@ import { setPriceTheme } from './priceTheme';
 import { setModalTheme } from './modalTheme';
 
 export const AddTheme = ({ theme }: IAddTheme): void => {
-  const { style } = document.documentElement || {};
-  const { metrics, button, text, image, input, selectors, datePicker, dropdown, tab, price, modal } = theme || {};
+  const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+  if (canUseDOM) {
+    const { style } = document.documentElement || {};
+    const { metrics, button, text, image, input, selectors, datePicker, dropdown, tab, price, modal } = theme || {};
 
-  const { radio, checkbox } = selectors || {};
+    const { radio, checkbox } = selectors || {};
 
-  if (metrics) setMetricsTheme({ metrics, style });
-  if (button) setButtonTheme({ button, style });
-  if (input) setInputTheme({ input, style });
-  if (checkbox) setCheckboxTheme({ checkbox, style });
-  if (radio) setRadioTheme({ radio, style });
-  if (datePicker) setDatePickerTheme({ datePicker, style });
-  if (dropdown) setDropdownTheme({ dropdown, style });
-  if (text) setTextTheme({ text, style });
-  if (tab) setTabTheme({ tab, style });
-  if (image) setImageTheme({ image, style });
-  if (price) setPriceTheme({ price, style });
-  if (modal) setModalTheme({ modal, style });
+    if (metrics) setMetricsTheme({ metrics, style });
+    if (button) setButtonTheme({ button, style });
+    if (input) setInputTheme({ input, style });
+    if (checkbox) setCheckboxTheme({ checkbox, style });
+    if (radio) setRadioTheme({ radio, style });
+    if (datePicker) setDatePickerTheme({ datePicker, style });
+    if (dropdown) setDropdownTheme({ dropdown, style });
+    if (text) setTextTheme({ text, style });
+    if (tab) setTabTheme({ tab, style });
+    if (image) setImageTheme({ image, style });
+    if (price) setPriceTheme({ price, style });
+    if (modal) setModalTheme({ modal, style });
+  }
 };
