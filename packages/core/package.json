@@ -29,7 +29,6 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigadosenior/system": "0.0.5",
     "@obrigadosenior/theme": "0.0.5"
   },
   "peerDependencies": {

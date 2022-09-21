@@ -10,6 +10,8 @@ export const setSystemTheme = ({ system, style }: ISetSystemTheme): void => {
     const { colors } = system;
     if (colors) {
       style.setProperty('--system-background-color', colors.background);
+      style.setProperty('--system-primary-color', colors.primary);
+      style.setProperty('--system-secondary-color', colors.secondary);
     }
   }
 };

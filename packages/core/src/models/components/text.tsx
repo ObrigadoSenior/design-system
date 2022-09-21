@@ -9,10 +9,13 @@ export type ITextProps = {
   type?: type;
   tag?: fontTag;
   wrap?: 'wrap' | 'nowrap';
-  innerRef?: React.RefObject<HTMLSpanElement | HTMLParagraphElement>;
+  innerRef?: React.RefObject<HTMLSpanElement | HTMLParagraphElement | HTMLAnchorElement>;
+  ref?: React.RefObject<HTMLSpanElement | HTMLParagraphElement | HTMLAnchorElement>;
   leftIcon?: IIconProps;
   rightIcon?: IIconProps;
   fontStyle?: 'italic' | 'normal';
   width?: 'auto' | 'full';
   className?: string;
+  href?: string;
+  onClick?: () => void;
 };

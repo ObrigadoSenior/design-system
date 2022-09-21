@@ -4,11 +4,10 @@ import { calendarTheme } from '../../../calendar';
 import { coreTheme } from '../../../core';
 import { formsTheme } from '../../../forms';
 import { systemTheme } from '../../../system';
-import { selectTheme } from '../../../select';
 
 import { metrics } from '../../../../travelTheme';
 
-AddTheme({ theme: { metrics, ...calendarTheme, ...coreTheme, ...formsTheme, ...systemTheme, ...selectTheme } });
+AddTheme({ theme: { metrics, ...calendarTheme, ...coreTheme, ...formsTheme, ...systemTheme } });
 afterEach(cleanup);
 
 const { style } = document.documentElement || {};
@@ -67,11 +66,6 @@ describe('Theme', () => {
     expect(getStyle('--text-disabled-color')).toBeTruthy();
     expect(getStyle('--text-size-s')).toBeTruthy();
     expect(getStyle('--text-font-weight-light')).toBeTruthy();
-  });
-  test('sets tab', () => {
-    expect(getStyle('--tab-disabled-color')).toBeTruthy();
-    expect(getStyle('--tab-color')).toBeTruthy();
-    expect(getStyle('--tab-gap')).toBeTruthy();
   });
   test('sets image', () => {
     expect(getStyle('--image-border-radius')).toBeTruthy();

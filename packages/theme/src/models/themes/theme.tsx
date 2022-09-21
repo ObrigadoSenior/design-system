@@ -6,7 +6,6 @@ import { TThemeInput } from './input';
 import { TThemeRadio } from './radio';
 import { TThemeDropdown } from './dropdown';
 import { TThemeText } from './text';
-import { TThemeTab } from './tab';
 import { TThemeImage } from './image';
 import { TThemeModal } from './modal';
 import { TThemeSystem } from './system';
@@ -29,7 +28,6 @@ export type ITheme = {
   };
   datePicker?: TThemeDatePicker;
   dropdown?: TThemeDropdown;
-  tab?: TThemeTab;
   modal?: TThemeModal;
   system?: TThemeSystem;
 };
