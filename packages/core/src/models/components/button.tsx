@@ -13,5 +13,5 @@ export type IButtonProps = {
   rightIcon?: ITextProps['rightIcon'];
   innerRef?: RefObject<HTMLButtonElement>;
   disabled?: boolean;
-  className?: string;
+  className?: string | string[];
 };

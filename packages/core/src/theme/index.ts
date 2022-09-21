@@ -67,7 +67,4 @@ export const coreTheme: ITheme = {
   image: {
     borderRadius: `${xsmall}px`,
   },
-  price: {
-    padding: `${xsmall}px`,
-  },
 };

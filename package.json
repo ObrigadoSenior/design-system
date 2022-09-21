@@ -1,7 +1,7 @@
 {
-  "name": "obrigadosenior",
+  "name": "obrigadosenior-design-system",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.8",
   "description": "Obrigado Senior Design System (OSDS)",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "clean:packages": "lerna run clean",
     "prod:build:packages": "yarn clean:packages && yarn build:packages && yarn clean:packages",
     "pre:build:check": "yarn prettier && yarn lint && yarn test:packages",
-    "publish": "lerna publish --exact --force-publish=* --access=public",
+    "publish": "lerna publish --exact --force-publish=*",
     "publish:check": "yarn pre:build:check && yarn prod:build:packages && yarn publish",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build:storybook": "build-storybook -o ./storybook-static",

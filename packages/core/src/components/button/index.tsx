@@ -28,5 +28,3 @@ export const Button = ({
     </Text>
   </button>
 );
-
-export * from './setting';
