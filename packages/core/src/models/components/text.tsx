@@ -18,4 +18,5 @@ export type ITextProps = {
   className?: string;
   href?: string;
   onClick?: () => void;
+  textClassName?: string;
 };

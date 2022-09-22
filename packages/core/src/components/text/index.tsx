@@ -16,12 +16,13 @@ export const Text = ({
   rightIcon,
   fontStyle = 'normal',
   width = 'full',
+  textClassName,
   ...rest
 }: ITextProps): JSX.Element => {
   const text = React.createElement(
     tag,
     {
-      className: `text text-${size} text-${type} text-${weight} text-${wrap} text-${fontStyle}`,
+      className: `text text-${size} text-${type} text-${weight} text-${wrap} text-${fontStyle} ${textClassName}`,
       ref: innerRef,
       style: { ...rest },
       'data-testid': 'text',

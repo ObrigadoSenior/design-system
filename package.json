@@ -1,6 +1,6 @@
 {
   "name": "obrigadosenior-design-system",
-  "private": true,
+  "private": false,
   "version": "0.0.8",
   "description": "Obrigado Senior Design System (OSDS)",
   "author": "Johan Sjöberg",
