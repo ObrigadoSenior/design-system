@@ -1,7 +1,6 @@
 import { IAddTheme } from '../models';
 import { setButtonTheme } from './buttonTheme';
 import { setCheckboxTheme } from './checkboxTheme';
-import { setDatePickerTheme } from './datePickerTheme';
 import { setDropdownTheme } from './dropdownTheme';
 import { setInputTheme } from './inputTheme';
 import { setMetricsTheme } from './metricsTheme';
@@ -16,7 +15,7 @@ export const AddTheme = ({ theme }: IAddTheme): void => {
 
   if (canUseDOM) {
     const { style } = document.documentElement || {};
-    const { metrics, button, text, image, input, selectors, datePicker, dropdown, modal, system } = theme || {};
+    const { metrics, button, text, image, input, selectors, dropdown, modal, system } = theme || {};
 
     const { radio, checkbox } = selectors || {};
 
@@ -25,7 +24,6 @@ export const AddTheme = ({ theme }: IAddTheme): void => {
     if (input) setInputTheme({ input, style });
     if (checkbox) setCheckboxTheme({ checkbox, style });
     if (radio) setRadioTheme({ radio, style });
-    if (datePicker) setDatePickerTheme({ datePicker, style });
     if (dropdown) setDropdownTheme({ dropdown, style });
     if (text) setTextTheme({ text, style });
     if (image) setImageTheme({ image, style });

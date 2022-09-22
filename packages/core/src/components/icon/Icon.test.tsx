@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import { Icon as TestComponent } from '.';
@@ -9,7 +8,7 @@ type DefaultProps = Pick<TestComponentProps, 'color' | 'disabled' | 'icon' | 'si
 const defaultProps: DefaultProps = {
   color: 'black',
   size: 's',
-  icon: close,
+  icon: <></>,
   disabled: false,
 };
 afterEach(cleanup);

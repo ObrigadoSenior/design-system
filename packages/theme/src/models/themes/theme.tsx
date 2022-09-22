@@ -1,6 +1,5 @@
 import { TThemeButton } from './button';
 import { TThemeCheckbox } from './checkbox';
-import { TThemeDatePicker } from './datePicker';
 import { TThemeMetrics } from './metrics';
 import { TThemeInput } from './input';
 import { TThemeRadio } from './radio';
@@ -26,7 +25,6 @@ export type ITheme = {
     checkbox?: TThemeCheckbox;
     radio?: TThemeRadio;
   };
-  datePicker?: TThemeDatePicker;
   dropdown?: TThemeDropdown;
   modal?: TThemeModal;
   system?: TThemeSystem;

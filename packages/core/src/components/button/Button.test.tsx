@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Button as TestComponent } from '.';
@@ -25,16 +24,16 @@ describe('Button', () => {
   });
   test('calls onClick prop when clicked', () => {
     const handleClick = jest.fn();
-    const { getByTestId } = render(<Test leftIcon={{ icon: close }} onClick={handleClick} />);
+    const { getByTestId } = render(<Test leftIcon={{ icon: <></> }} onClick={handleClick} />);
     fireEvent.click(getByTestId('button'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
   test('left icon can be added', () => {
-    const { getByTestId } = render(<Test leftIcon={{ icon: close }} />);
+    const { getByTestId } = render(<Test leftIcon={{ icon: <></> }} />);
     expect(getByTestId('icon')).toBeInTheDocument();
   });
   test('right icon can be added', () => {
-    const { getByTestId } = render(<Test rightIcon={{ icon: close }} />);
+    const { getByTestId } = render(<Test rightIcon={{ icon: <></> }} />);
     expect(getByTestId('icon')).toBeInTheDocument();
   });
   test('can set full width', () => {

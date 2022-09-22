@@ -1,5 +1,5 @@
-import { close } from '@obrigadosenior/icons';
 import { renderHook, act } from '@testing-library/react-hooks';
+import React from 'react';
 import { useFilterOptions } from './useFilterOptions';
 
 const options = [
@@ -14,7 +14,7 @@ const options = [
     value: 'dnk',
     id: 'dnk',
     data: '1',
-    leftIcon: close,
+    leftIcon: <></>,
   },
 ];
 test('change options on new typed value', () => {

@@ -1,13 +1,12 @@
 import { cleanup } from '@testing-library/react';
 import { AddTheme } from '.';
-import { calendarTheme } from '../../../calendar';
 import { coreTheme } from '../../../core';
 import { formsTheme } from '../../../forms';
 import { systemTheme } from '../../../system';
 
 import { metrics } from '../../../../travelTheme';
 
-AddTheme({ theme: { metrics, ...calendarTheme, ...coreTheme, ...formsTheme, ...systemTheme } });
+AddTheme({ theme: { metrics, ...coreTheme, ...formsTheme, ...systemTheme } });
 afterEach(cleanup);
 
 const { style } = document.documentElement || {};
@@ -40,19 +39,6 @@ describe('Theme', () => {
     expect(getStyle('--radio-bg-color')).toBeTruthy();
     expect(getStyle('--radio-checkmark-color')).toBeTruthy();
     expect(getStyle('--radio-hover-color')).toBeTruthy();
-  });
-  test('sets datepicker', () => {
-    expect(getStyle('--date-picker-border-radius')).toBeTruthy();
-    expect(getStyle('--date-picker-day-width')).toBeTruthy();
-    expect(getStyle('--date-picker-day-disabled-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-day-active-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-day-active-month-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-day-selected-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-day-selected-range-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-day-month-break-border-color')).toBeTruthy();
-    expect(getStyle('--date-picker-week-text-size')).toBeTruthy();
-    expect(getStyle('--date-picker-text-color')).toBeTruthy();
-    expect(getStyle('--date-picker-change-month-button-border-color')).toBeTruthy();
   });
   test('sets dropdown', () => {
     expect(getStyle('--dropdown-border-radius')).toBeTruthy();

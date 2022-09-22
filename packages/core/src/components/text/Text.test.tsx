@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import { Text as TestComponent } from '.';
@@ -48,7 +47,7 @@ describe('Text', () => {
   });
   test('set left icons', () => {
     const { getAllByTestId } = render(
-      <Test wrap="nowrap" leftIcon={{ icon: close }}>
+      <Test wrap="nowrap" leftIcon={{ icon: <></> }}>
         Text
       </Test>,
     );
@@ -56,7 +55,7 @@ describe('Text', () => {
   });
   test('set right icons', () => {
     const { getAllByTestId } = render(
-      <Test wrap="nowrap" rightIcon={{ icon: close }}>
+      <Test wrap="nowrap" rightIcon={{ icon: <></> }}>
         Text
       </Test>,
     );
@@ -64,7 +63,7 @@ describe('Text', () => {
   });
   test('set both icons', () => {
     const { getAllByTestId } = render(
-      <Test wrap="nowrap" leftIcon={{ icon: close }} rightIcon={{ icon: close }}>
+      <Test wrap="nowrap" leftIcon={{ icon: <></> }} rightIcon={{ icon: <></> }}>
         Text
       </Test>,
     );

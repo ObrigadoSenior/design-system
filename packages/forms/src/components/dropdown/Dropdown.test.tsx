@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { cleanup, render, waitFor, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Dropdown as TestComponent } from '.';
@@ -11,14 +10,14 @@ const options: IDropdownOption[] = [
     value: 'option1',
     id: 'opt1',
     data: '1',
-    leftIcon: close,
+    leftIcon: <></>,
   },
   {
     title: 'Option 2',
     value: 'option2',
     id: 'opt2',
     data: '2',
-    leftIcon: close,
+    leftIcon: <></>,
     disabled: true,
   },
 ];

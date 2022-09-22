@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { cleanup, render, fireEvent, waitFor } from '@testing-library/react';
 import React from 'react';
 import { Modal as TestComponent } from '.';
@@ -11,7 +10,7 @@ const defaultProps: DefaultProps = {
   title: <Text>Title</Text>,
   open: false,
   onClick: () => {},
-  closeIcon: { icon: close },
+  closeIcon: { icon: <></> },
 };
 
 afterEach(cleanup);

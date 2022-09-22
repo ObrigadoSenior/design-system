@@ -1,7 +1,6 @@
 export * from './addTheme';
 export * from './button';
 export * from './checkbox';
-export * from './datePicker';
 export * from './dropdown';
 export * from './image';
 export * from './input';

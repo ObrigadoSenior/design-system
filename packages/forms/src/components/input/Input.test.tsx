@@ -1,4 +1,3 @@
-import { close } from '@obrigadosenior/icons';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Input as TestComponent } from '.';
@@ -13,8 +12,8 @@ type DefaultProps = Pick<
 const defaultProps: DefaultProps = {
   title: 'Title',
   placeholder: 'Placeholder',
-  leftIcon: close,
-  rightIcon: close,
+  leftIcon: <></>,
+  rightIcon: <></>,
   defaultValue: '',
   height: 'xl',
   onChange: () => {},
