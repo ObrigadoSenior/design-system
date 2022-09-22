@@ -1,6 +1,6 @@
 {
   "name": "@obrigadosenior/system",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Obrigado Senior Design System - System",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -29,8 +29,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigadosenior/core": "0.0.5",
-    "@obrigadosenior/theme": "0.0.5"
+    "@obrigadosenior/core": "0.0.6",
+    "@obrigadosenior/theme": "0.0.6"
   },
   "peerDependencies": {
     "react": ">=16.8.6",
