@@ -1,7 +1,7 @@
-import { ITheme } from '../models';
+import { ThemeModalProps } from '../models';
 
 interface ISetModalTheme {
-  modal: ITheme['modal'];
+  modal: ThemeModalProps;
   style: CSSStyleDeclaration;
 }
 

@@ -1,7 +1,7 @@
-import { TThemeMetrics } from '../models';
+import { ThemeMetricsProps } from '../models';
 
 interface ISetMetricsTheme {
-  metrics: TThemeMetrics;
+  metrics: ThemeMetricsProps;
   style: CSSStyleDeclaration;
 }
 

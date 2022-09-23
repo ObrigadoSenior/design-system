@@ -1,31 +1,31 @@
-import { TThemeButton } from './button';
-import { TThemeCheckbox } from './checkbox';
-import { TThemeMetrics } from './metrics';
-import { TThemeInput } from './input';
-import { TThemeRadio } from './radio';
-import { TThemeDropdown } from './dropdown';
-import { TThemeText } from './text';
-import { TThemeImage } from './image';
-import { TThemeModal } from './modal';
-import { TThemeSystem } from './system';
+import { ThemeButtonProps } from './button';
+import { ThemeCheckboxProps } from './checkbox';
+import { ThemeMetricsProps } from './metrics';
+import { ThemeInputProps } from './input';
+import { ThemeRadioProps } from './radio';
+import { ThemeDropdownProps } from './dropdown';
+import { ThemeTextProps } from './text';
+import { ThemeModalProps } from './modal';
+import { ThemeSystemProps } from './system';
+import { ThemeIconProps } from './icon';
 
-export type ITheme = {
-  metrics?: TThemeMetrics;
+export type ThemeProps = {
+  metrics?: ThemeMetricsProps;
   button?: {
-    primary?: TThemeButton;
-    flat?: TThemeButton;
-    secondary?: TThemeButton;
-    badge?: TThemeButton;
-    icon?: TThemeButton;
+    primary?: ThemeButtonProps;
+    flat?: ThemeButtonProps;
+    secondary?: ThemeButtonProps;
+    badge?: ThemeButtonProps;
+    icon?: ThemeButtonProps;
   };
-  image?: TThemeImage;
-  input?: TThemeInput;
-  text?: TThemeText;
+  input?: ThemeInputProps;
+  text?: ThemeTextProps;
   selectors?: {
-    checkbox?: TThemeCheckbox;
-    radio?: TThemeRadio;
+    checkbox?: ThemeCheckboxProps;
+    radio?: ThemeRadioProps;
   };
-  dropdown?: TThemeDropdown;
-  modal?: TThemeModal;
-  system?: TThemeSystem;
+  dropdown?: ThemeDropdownProps;
+  modal?: ThemeModalProps;
+  system?: ThemeSystemProps;
+  icon?: ThemeIconProps;
 };

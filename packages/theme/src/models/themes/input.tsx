@@ -1,4 +1,4 @@
-export type TThemeInput = {
+export type ThemeInputProps = {
   backgroundColor: string;
   borderColor: string;
   textColor: string;

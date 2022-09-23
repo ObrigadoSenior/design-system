@@ -1,7 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { IModalProps } from '../../models';
+import cx from 'classnames';
+import { ModalProps } from '../../types';
 import { Button } from '@obrigadosenior/core';
-import './modalStyle.css';
+import styles from './Modal.module.scss';
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -17,15 +18,15 @@ const useWindowSize = () => {
   return size;
 };
 
-export const Modal: React.FC<IModalProps> = ({
+export const Modal = ({
   closeIcon,
   title,
   children,
-  onClick,
+  onClickIcon,
   open = false,
   overlayElement,
   className,
-}) => {
+}: ModalProps): JSX.Element => {
   const modalRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -68,22 +69,25 @@ export const Modal: React.FC<IModalProps> = ({
 
   return (
     <>
-      <div data-testid="modal-overlay" className={`overlay ${open ? 'open' : 'close'}`}>
+      <div data-testid="modal-overlay" className={cx(styles.overlay, open ? styles.open : styles.close)}>
         {overlayElement}
       </div>
-      <div data-testid="modal" ref={modalRef} className={`modal ${open ? 'open' : 'close'} ${className}`}>
-        <div ref={headerRef} className="modal-header">
+      <div
+        data-testid="modal"
+        ref={modalRef}
+        className={cx(styles.modal, open ? styles.open : styles.close, className)}
+      >
+        <div ref={headerRef} className={styles.header}>
           {title}
           <Button
-            label=""
-            leftIcon={closeIcon}
+            icon={closeIcon}
             buttonType="icon"
             onClick={() => {
-              onClick(!open);
+              onClickIcon(!open);
             }}
           />
         </div>
-        <div data-testid="modal-content" ref={contentRef} className="modal-content">
+        <div data-testid="modal-content" ref={contentRef} className={styles.content}>
           {children}
         </div>
       </div>

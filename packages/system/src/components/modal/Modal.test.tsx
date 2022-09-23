@@ -2,12 +2,12 @@ import { cleanup, render, fireEvent, waitFor } from '@testing-library/react';
 import React from 'react';
 import { Modal as TestComponent } from '.';
 import { OverrideWithOptional } from '../../../../../utils';
-import { IModalProps as TestComponentProps } from '../../models';
+import { ModalProps as TestComponentProps } from '../../types';
 import { Text } from '@obrigadosenior/core';
 
 type DefaultProps = Pick<TestComponentProps, 'title' | 'open' | 'onClick' | 'closeIcon'>;
 const defaultProps: DefaultProps = {
-  title: <Text>Title</Text>,
+  title: <Text tag="span">Title</Text>,
   open: false,
   onClick: () => {},
   closeIcon: { icon: <></> },

@@ -1,7 +1,7 @@
-import { TThemeDropdown } from '../models';
+import { ThemeDropdownProps } from '../models';
 
 interface ISetDropdownTheme {
-  dropdown: TThemeDropdown;
+  dropdown: ThemeDropdownProps;
   style: CSSStyleDeclaration;
 }
 

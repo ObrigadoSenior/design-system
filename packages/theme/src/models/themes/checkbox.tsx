@@ -1,4 +1,4 @@
-export type TThemeCheckbox = {
+export type ThemeCheckboxProps = {
   backgroundColor: string;
   disabledBackgroundColor: string;
   checkmarkColor: string;
