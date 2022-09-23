@@ -1,39 +1,25 @@
-import { Icon } from '../icon';
+import cx from 'classnames';
 import React from 'react';
-import { ITextProps } from '../../models';
-import './textStyle.css';
+import { TextProps } from '../../models';
+import styles from './Text.module.scss';
 
 export const Text = ({
   children,
   size = 'm',
   type = 'primary',
-  weight,
+  weight = 'medium',
   tag = 'span',
-  wrap = 'wrap',
-  innerRef,
   className = '',
-  leftIcon,
-  rightIcon,
   fontStyle = 'normal',
-  width = 'full',
-  textClassName,
-  ...rest
-}: ITextProps): JSX.Element => {
+}: TextProps): JSX.Element => {
   const text = React.createElement(
     tag,
     {
-      className: `text text-${size} text-${type} text-${weight} text-${wrap} text-${fontStyle} ${textClassName}`,
-      ref: innerRef,
-      style: { ...rest },
+      className: cx(styles.text, styles[tag], styles[size], styles[type], styles[weight], className),
+      style: { fontStyle },
       'data-testid': 'text',
     },
     children,
   );
-  return (
-    <span data-testid="text-wrapper" className={`text-outer text-${width} ${className}`}>
-      {leftIcon && <Icon className={`left-icon ${type}`} {...leftIcon} />}
-      {text}
-      {rightIcon && <Icon className={`right-icon ${type}`} {...rightIcon} />}
-    </span>
-  );
+  return text;
 };

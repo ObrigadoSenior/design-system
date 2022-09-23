@@ -3,5 +3,7 @@ export type TThemeSystem = {
     background: string;
     primary: string;
     secondary: string;
+    primaryAccent: string;
+    secondaryAccent: string;
   };
 };

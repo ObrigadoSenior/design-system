@@ -15,7 +15,6 @@ export const coreTheme: ITheme = {
       borderColor: modernRed,
       borderRadius: `${large}px`,
       padding: `${xsmall}px ${small}px`,
-      height: `${xlarge}px`,
     },
     flat: {
       backgroundColor: 'transparent',
@@ -23,7 +22,6 @@ export const coreTheme: ITheme = {
       borderColor: 'transparent',
       borderRadius: `${none}px`,
       padding: `${none}px ${none}px`,
-      height: `${small}px`,
     },
     secondary: {
       backgroundColor: moln,
@@ -31,7 +29,6 @@ export const coreTheme: ITheme = {
       borderColor: tjara,
       borderRadius: `${small}px`,
       padding: `${xsmall}px ${small}px`,
-      height: `${xlarge}px`,
     },
     badge: {
       backgroundColor: modernBlue,
@@ -39,7 +36,6 @@ export const coreTheme: ITheme = {
       borderColor: modernBlue,
       borderRadius: `${small}px`,
       padding: `${xsmall}px ${xsmall}px`,
-      height: `${small}px`,
     },
     icon: {
       backgroundColor: himmel,
@@ -47,7 +43,6 @@ export const coreTheme: ITheme = {
       borderColor: himmel,
       borderRadius: `${xlarge}px`,
       padding: `${xsmall}px`,
-      height: `${medium}px`,
     },
   },
   text: {
@@ -60,7 +55,6 @@ export const coreTheme: ITheme = {
     fontSizeL: l,
     fontSizeXl: xl,
     fontWeightLight: `${fwLight}`,
-    fontWeightRegular: `${fwRegular}`,
     fontWeightMedium: `${fwMedium}`,
     fontWeightBold: `${fwBold}`,
   },

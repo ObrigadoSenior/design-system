@@ -8,6 +8,7 @@ import { TThemeText } from './text';
 import { TThemeImage } from './image';
 import { TThemeModal } from './modal';
 import { TThemeSystem } from './system';
+import { ThemeIconProps } from './icon';
 
 export type ITheme = {
   metrics?: TThemeMetrics;
@@ -28,4 +29,5 @@ export type ITheme = {
   dropdown?: TThemeDropdown;
   modal?: TThemeModal;
   system?: TThemeSystem;
+  icon?: ThemeIconProps;
 };

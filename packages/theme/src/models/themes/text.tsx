@@ -8,7 +8,6 @@ export type TThemeText = {
   fontSizeL: string;
   fontSizeXl: string;
   fontWeightLight: string;
-  fontWeightRegular: string;
   fontWeightMedium: string;
   fontWeightBold: string;
 };

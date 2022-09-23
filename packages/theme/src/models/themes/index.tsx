@@ -2,6 +2,7 @@ export * from './addTheme';
 export * from './button';
 export * from './checkbox';
 export * from './dropdown';
+export * from './icon';
 export * from './image';
 export * from './input';
 export * from './radio';

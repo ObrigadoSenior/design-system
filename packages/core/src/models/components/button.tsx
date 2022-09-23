@@ -1,17 +1,30 @@
-import { RefObject } from 'react';
-import { fontSize, size } from '../../../../../utils';
-import { ITextProps } from './text';
+import { ComponentPropsWithoutRef } from 'react';
+import { fontSize } from '../../../../../utils';
+import { IconProps } from './icon';
 
-export type IButtonProps = {
-  label: string;
+interface DefaultButtonProps extends ComponentPropsWithoutRef<'button'> {
   onClick: () => void;
-  buttonType: 'primary' | 'secondary' | 'badge' | 'icon' | 'flat';
-  size?: size;
+  width?: 'auto' | '100%';
+}
+
+interface BtnLabelProps {
+  label: string;
   labelSize?: fontSize;
-  fullWidth?: boolean;
-  leftIcon?: ITextProps['leftIcon'];
-  rightIcon?: ITextProps['rightIcon'];
-  innerRef?: RefObject<HTMLButtonElement>;
-  disabled?: boolean;
-  className?: string | string[];
-};
+  icon: never;
+}
+
+interface BtnIconProps {
+  label: never;
+  labelSize: never;
+  icon?: IconProps;
+}
+
+type ConditionalProps =
+  | (BtnLabelProps & {
+      buttonType: 'primary' | 'secondary' | 'badge' | 'flat';
+    })
+  | (BtnIconProps & {
+      buttonType: 'icon';
+    });
+
+export type ButtonProps = DefaultButtonProps & ConditionalProps;

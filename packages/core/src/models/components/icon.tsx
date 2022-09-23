@@ -1,9 +1,10 @@
-import { ReactElement } from 'react';
+import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { size, type } from '../../../../../utils';
 
-export type IIconProps = {
+export interface IconProps extends ComponentPropsWithoutRef<'span'> {
   icon: ReactElement | JSX.Element;
-  size?: 's' | 'm' | 'l' | 'xl';
-  color?: string;
+  type?: type;
+  size?: size;
   disabled?: boolean;
   className?: string;
-};
+}

@@ -1,7 +1,7 @@
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Button as TestComponent } from '.';
-import { IButtonProps as TestComponentProps } from '../../models';
+import { ButtonProps as TestComponentProps } from '../../models';
 import { OverrideWithOptional } from '../../../../../utils';
 
 type DefaultProps = Pick<TestComponentProps, 'label' | 'size' | 'buttonType' | 'onClick'>;

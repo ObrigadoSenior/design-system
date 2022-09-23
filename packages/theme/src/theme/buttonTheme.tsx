@@ -15,7 +15,6 @@ export const setButtonTheme = ({ button, style }: ISetButtonTheme): void => {
       style.setProperty('--button-primary-border-color', primary.borderColor);
       style.setProperty('--button-primary-border-radius', primary.borderRadius);
       style.setProperty('--button-primary-padding', primary.padding);
-      style.setProperty('--button-primary-height', primary.height);
     }
 
     /* Flat */
@@ -25,7 +24,6 @@ export const setButtonTheme = ({ button, style }: ISetButtonTheme): void => {
       style.setProperty('--button-flat-border-color', flat.borderColor);
       style.setProperty('--button-flat-border-radius', flat.borderRadius);
       style.setProperty('--button-flat-padding', flat.padding);
-      style.setProperty('--button-flat-height', flat.height);
     }
 
     /* Secondary */
@@ -35,7 +33,6 @@ export const setButtonTheme = ({ button, style }: ISetButtonTheme): void => {
       style.setProperty('--button-secondary-border-color', secondary.borderColor);
       style.setProperty('--button-secondary-border-radius', secondary.borderRadius);
       style.setProperty('--button-secondary-padding', secondary.padding);
-      style.setProperty('--button-secondary-height', secondary.height);
     }
 
     /* Badge */
@@ -45,7 +42,6 @@ export const setButtonTheme = ({ button, style }: ISetButtonTheme): void => {
       style.setProperty('--button-badge-border-color', badge.borderColor);
       style.setProperty('--button-badge-border-radius', badge.borderRadius);
       style.setProperty('--button-badge-padding', badge.padding);
-      style.setProperty('--button-badge-height', badge.height);
     }
 
     /* Icon */
@@ -55,7 +51,6 @@ export const setButtonTheme = ({ button, style }: ISetButtonTheme): void => {
       style.setProperty('--button-icon-border-color', icon.borderColor);
       style.setProperty('--button-icon-border-radius', icon.borderRadius);
       style.setProperty('--button-icon-padding', icon.padding);
-      style.setProperty('--button-icon-height', icon.height);
     }
   }
 };

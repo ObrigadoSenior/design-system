@@ -4,5 +4,4 @@ export type TThemeButton = {
   textColor: string;
   borderRadius: string;
   padding: string;
-  height: string;
 };

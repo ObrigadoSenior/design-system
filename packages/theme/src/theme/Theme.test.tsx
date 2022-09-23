@@ -2,9 +2,8 @@ import { cleanup } from '@testing-library/react';
 import { AddTheme } from '.';
 import { coreTheme } from '../../../core';
 import { formsTheme } from '../../../forms';
-import { systemTheme } from '../../../system';
-
 import { metrics } from '../../../../travelTheme';
+import { systemTheme } from '../../../system';
 
 AddTheme({ theme: { metrics, ...coreTheme, ...formsTheme, ...systemTheme } });
 afterEach(cleanup);

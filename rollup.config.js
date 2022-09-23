@@ -1,8 +1,8 @@
 import external from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
 import postCss from 'rollup-plugin-postcss';
-import {terser} from "rollup-plugin-terser";
-import dts from "rollup-plugin-dts";
+import { terser } from 'rollup-plugin-terser';
+import dts from 'rollup-plugin-dts';
 
 export default [
   {
@@ -25,8 +25,8 @@ export default [
         // eslint-disable-next-line no-undef
         typescript: require('typescript'),
       }),
-      terser()
-    ]
+      terser(),
+    ],
   },
   {
     input: './index.ts',
@@ -39,12 +39,12 @@ export default [
     plugins: [
       postCss({
         extract: false,
-        inject: false
+        inject: false,
       }),
       external({
         includeDependencies: true,
       }),
       dts(),
-    ]
-  }
-]
+    ],
+  },
+];

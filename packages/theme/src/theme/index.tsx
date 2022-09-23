@@ -9,13 +9,14 @@ import { setTextTheme } from './textTheme';
 import { setImageTheme } from './imageTheme';
 import { setModalTheme } from './modalTheme';
 import { setSystemTheme } from './systemTheme';
+import { setIconTheme } from './iconTheme';
 
 export const AddTheme = ({ theme }: IAddTheme): void => {
   const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
   if (canUseDOM) {
     const { style } = document.documentElement || {};
-    const { metrics, button, text, image, input, selectors, dropdown, modal, system } = theme || {};
+    const { metrics, button, text, image, input, selectors, dropdown, modal, system, icon } = theme || {};
 
     const { radio, checkbox } = selectors || {};
 
@@ -29,5 +30,6 @@ export const AddTheme = ({ theme }: IAddTheme): void => {
     if (image) setImageTheme({ image, style });
     if (modal) setModalTheme({ modal, style });
     if (system) setSystemTheme({ system, style });
+    if (icon) setIconTheme({ icon, style });
   }
 };

@@ -16,5 +16,5 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "esModuleInterop": true
-  },
+  }
 }

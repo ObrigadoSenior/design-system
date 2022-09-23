@@ -1,22 +1,32 @@
-import { IIconProps } from './icon';
-import { fontSize, fontTag, type, weight } from '../../../../../utils';
+import { ComponentPropsWithoutRef } from 'react';
+import { fontSize, fontStyle, type, weight } from '../../../../../utils';
 
-export type ITextProps = {
+type TxtPProps = ComponentPropsWithoutRef<'p'>;
+type TxtAProps = ComponentPropsWithoutRef<'a'>;
+type TxtSpanProps = ComponentPropsWithoutRef<'span'>;
+type TxtHeaderProps = ComponentPropsWithoutRef<'h1'>;
+
+interface DefaultTextProps {
   children: string;
-  color?: string;
   size?: fontSize;
   weight?: weight;
   type?: type;
-  tag?: fontTag;
-  wrap?: 'wrap' | 'nowrap';
-  innerRef?: React.RefObject<HTMLSpanElement | HTMLParagraphElement | HTMLAnchorElement>;
-  ref?: React.RefObject<HTMLSpanElement | HTMLParagraphElement | HTMLAnchorElement>;
-  leftIcon?: IIconProps;
-  rightIcon?: IIconProps;
-  fontStyle?: 'italic' | 'normal';
-  width?: 'auto' | 'full';
+  fontStyle?: fontStyle;
   className?: string;
-  href?: string;
-  onClick?: () => void;
-  textClassName?: string;
-};
+}
+
+type ConditionalProps =
+  | (TxtPProps & {
+      tag: 'p';
+    })
+  | (TxtAProps & {
+      tag: 'a';
+    })
+  | (TxtSpanProps & {
+      tag: 'span';
+    })
+  | (TxtHeaderProps & {
+      tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    });
+
+export type TextProps = DefaultTextProps & ConditionalProps;
