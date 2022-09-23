@@ -1,7 +1,7 @@
-import { ITheme } from '../models';
+import { ThemeProps } from '../models';
 
 interface SetIconTheme {
-  icon: ITheme['icon'];
+  icon: ThemeProps['icon'];
   style: CSSStyleDeclaration;
 }
 

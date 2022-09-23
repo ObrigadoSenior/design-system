@@ -1,4 +1,4 @@
-export type TThemeMetrics = {
+export type ThemeMetricsProps = {
   width: {
     min: string;
     max: string;

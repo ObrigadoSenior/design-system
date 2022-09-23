@@ -1,7 +1,7 @@
-import { ITheme } from '../models';
+import { ThemeTextProps } from '../models';
 
 interface ISetTextTheme {
-  text: ITheme['text'];
+  text: ThemeTextProps;
   style: CSSStyleDeclaration;
 }
 

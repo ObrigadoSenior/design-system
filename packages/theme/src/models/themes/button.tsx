@@ -1,4 +1,4 @@
-export type TThemeButton = {
+export type ThemeButtonProps = {
   backgroundColor: string;
   borderColor: string;
   textColor: string;

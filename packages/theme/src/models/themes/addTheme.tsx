@@ -1,4 +1,4 @@
-import { ITheme } from './theme';
-export type IAddTheme = {
-  theme: ITheme;
+import { ThemeProps } from './theme';
+export type AddThemeProps = {
+  theme: ThemeProps;
 };

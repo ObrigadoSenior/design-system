@@ -1,47 +1,26 @@
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import React from 'react';
-import { Button as TestComponent } from '.';
-import { ButtonProps as TestComponentProps } from '../../models';
-import { OverrideWithOptional } from '../../../../../utils';
+import { Button } from '.';
 
-type DefaultProps = Pick<TestComponentProps, 'label' | 'size' | 'buttonType' | 'onClick'>;
-const defaultProps: DefaultProps = {
-  label: 'Label',
-  buttonType: 'primary',
-  size: 's',
-  onClick: () => {},
-};
 afterEach(cleanup);
-
-const Test = (props: OverrideWithOptional<TestComponentProps, DefaultProps>) => (
-  <TestComponent {...defaultProps} {...props} />
-);
 
 describe('Button', () => {
   test('sets label', () => {
-    const { getByTestId } = render(<Test />);
+    const { getByTestId } = render(<Button onClick={() => {}} label="Label" />);
     expect(getByTestId('text').textContent).toBe('Label');
   });
   test('calls onClick prop when clicked', () => {
     const handleClick = jest.fn();
-    const { getByTestId } = render(<Test leftIcon={{ icon: <></> }} onClick={handleClick} />);
+    const { getByTestId } = render(<Button icon={{ icon: <></> }} onClick={handleClick} />);
     fireEvent.click(getByTestId('button'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
   test('left icon can be added', () => {
-    const { getByTestId } = render(<Test leftIcon={{ icon: <></> }} />);
-    expect(getByTestId('icon')).toBeInTheDocument();
-  });
-  test('right icon can be added', () => {
-    const { getByTestId } = render(<Test rightIcon={{ icon: <></> }} />);
+    const { getByTestId } = render(<Button icon={{ icon: <></> }} onClick={() => {}} />);
     expect(getByTestId('icon')).toBeInTheDocument();
   });
   test('can set full width', () => {
-    const { getByTestId } = render(<Test fullWidth />);
-    expect(getByTestId('button')).toHaveClass('button-full-width');
-  });
-  test('can change type', () => {
-    const { getByTestId } = render(<Test buttonType="secondary" />);
-    expect(getByTestId('button')).toHaveClass('button-secondary');
+    const { getByTestId } = render(<Button label="Label" width="100%" onClick={() => {}} />);
+    expect(getByTestId('button')).toHaveStyle('width: 100%');
   });
 });

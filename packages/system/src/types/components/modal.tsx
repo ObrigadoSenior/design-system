@@ -1,12 +1,12 @@
-import { IIconProps } from '@obrigadosenior/core';
+import { IconProps } from '@obrigadosenior/core';
 import { ReactElement } from 'react';
 
-export type IModalProps = {
+export interface ModalProps {
   children: ReactElement | JSX.Element;
-  closeIcon: IIconProps;
-  onClick: (open: boolean) => void;
+  closeIcon: IconProps;
+  onClickIcon: (open: boolean) => void;
   open?: boolean;
   title?: ReactElement | JSX.Element;
   className?: string;
   overlayElement?: ReactElement | JSX.Element;
-};
+}

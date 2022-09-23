@@ -1,7 +1,7 @@
-import { TThemeSystem } from '../models';
+import { ThemeSystemProps } from '../models';
 
 interface ISetSystemTheme {
-  system: TThemeSystem;
+  system: ThemeSystemProps;
   style: CSSStyleDeclaration;
 }
 

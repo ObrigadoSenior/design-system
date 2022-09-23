@@ -1,9 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
-import { IconProps } from '../../models';
+import { IconProps } from '../../types';
 import styles from './Icon.module.scss';
 
-export const Icon = ({ className, icon, size = 'm', disabled = false, type = 'primary' }: IconProps): JSX.Element => {
+export const Icon = ({ className, icon, size = 's', disabled = false, type = 'primary' }: IconProps): JSX.Element => {
   return (
     <span
       data-testid="icon"

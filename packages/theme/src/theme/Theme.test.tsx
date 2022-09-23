@@ -48,12 +48,9 @@ describe('Theme', () => {
     expect(getStyle('--dropdown-content-item-disabled-bg-color')).toBeTruthy();
   });
   test('sets text', () => {
-    expect(getStyle('--text-disabled-color')).toBeTruthy();
+    expect(getStyle('--text-color-disabled')).toBeTruthy();
     expect(getStyle('--text-size-s')).toBeTruthy();
-    expect(getStyle('--text-font-weight-light')).toBeTruthy();
-  });
-  test('sets image', () => {
-    expect(getStyle('--image-border-radius')).toBeTruthy();
+    expect(getStyle('--text-weight-light')).toBeTruthy();
   });
   test('sets modal', () => {
     expect(getStyle('--modal-color')).toBeTruthy();

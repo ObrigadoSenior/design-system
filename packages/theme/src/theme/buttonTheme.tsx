@@ -1,7 +1,7 @@
-import { ITheme } from '../models';
+import { ThemeProps } from '../models';
 
 interface ISetButtonTheme {
-  button: ITheme['button'];
+  button: ThemeProps['button'];
   style: CSSStyleDeclaration;
 }
 

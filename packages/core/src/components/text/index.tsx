@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
-import { TextProps } from '../../models';
+import { TextProps } from '../../types';
 import styles from './Text.module.scss';
 
 export const Text = ({

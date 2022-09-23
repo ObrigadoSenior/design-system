@@ -1,4 +1,4 @@
-export type TThemeSystem = {
+export type ThemeSystemProps = {
   colors: {
     background: string;
     primary: string;

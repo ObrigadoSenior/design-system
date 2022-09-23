@@ -1,4 +1,4 @@
-import { AddTheme, ITheme } from '@obrigadosenior/theme';
+import { AddTheme, ThemeProps } from '@obrigadosenior/theme';
 
 const defaultBtn = {
   borderRadius: '3px',
@@ -8,7 +8,7 @@ const defaultBtn = {
 const button = {
   primary: {
     ...defaultBtn,
-    backgroundColor: 'red',
+    backgroundColor: 'purple',
   },
   secondary: {
     ...defaultBtn,
@@ -28,7 +28,7 @@ const button = {
     padding: `1em`,
     borderRadius: '50%',
   },
-} as ITheme['button'];
+} as ThemeProps['button'];
 
 const icon = {
   primaryColor: 'red',
@@ -39,9 +39,20 @@ const icon = {
   sizeM: '3em',
   sizeL: '4em',
   sizeXl: '5em',
-} as ITheme['icon'];
+} as ThemeProps['icon'];
 
-export const theme: ITheme = {
+const modal = {
+  backgroundColor: 'red',
+  borderColor: 'blue',
+  borderRadius: `6px`,
+  color: 'black',
+  padding: `15px`,
+  shadow: 'yellow',
+  transitionSpeed: '500ms',
+  overlayColor: 'rgba(0,0,0,0.25)',
+} as ThemeProps['modal'];
+
+export const theme: ThemeProps = {
   text: {
     primaryColor: 'black',
     secondaryColor: 'green',
@@ -57,6 +68,7 @@ export const theme: ITheme = {
   },
   button,
   icon,
+  modal,
 };
 
 export const SetTheme = () => AddTheme({ theme });

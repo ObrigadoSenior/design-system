@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { ButtonProps } from '../../models';
+import { ButtonProps } from '../../types';
 import { Icon } from '../icon';
 import { Text } from '../text';
 import styles from './Button.module.scss';
@@ -21,9 +21,9 @@ export const Button = ({
       data-testid="button"
       {...rest}
     >
-      {icon ? <Icon className={styles.icon} {...icon} /> : null}
+      {icon ? <Icon className={cx(styles.icon)} size={labelSize} {...icon} /> : null}
       {label ? (
-        <Text tag="span" className="label" size={labelSize}>
+        <Text tag="span" className={cx(styles.label, icon ? styles.margin : null)} size={labelSize}>
           {label}
         </Text>
       ) : null}

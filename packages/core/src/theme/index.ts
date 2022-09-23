@@ -1,4 +1,4 @@
-import { ITheme } from '@obrigadosenior/theme';
+import { ThemeProps } from '@obrigadosenior/theme';
 import { fontSize, travelColors, fontWeight, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, modernBlue, himmel, tjara, silver, silverLight, moln } = travelColors || {};
@@ -6,7 +6,7 @@ const { none, xsmall, small, medium, large, xlarge } = sizes || {};
 const { light: fwLight, regular: fwRegular, medium: fwMedium, bold: fwBold } = fontWeight || {};
 const { xs, s, m, l, xl } = fontSize || {};
 
-export const coreTheme: ITheme = {
+export const coreTheme: ThemeProps = {
   metrics,
   button: {
     primary: {
@@ -57,8 +57,5 @@ export const coreTheme: ITheme = {
     fontWeightLight: `${fwLight}`,
     fontWeightMedium: `${fwMedium}`,
     fontWeightBold: `${fwBold}`,
-  },
-  image: {
-    borderRadius: `${xsmall}px`,
   },
 };

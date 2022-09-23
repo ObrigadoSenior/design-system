@@ -5,6 +5,9 @@
   border: none;
   cursor: pointer;
 
+  & > .label.margin {
+    margin-left: var(--metrics-size-xs);
+  }
   &.primary {
     background-color: var(--button-primary-bg-color);
     border: 1px solid var(--button-primary-border-color);
@@ -60,6 +63,7 @@
     background-color: var(--button-icon-bg-color);
     border-radius: var(--button-icon-border-radius);
     padding: var(--button-icon-padding);
+
     > * {
       width: 100%;
       height: 100%;

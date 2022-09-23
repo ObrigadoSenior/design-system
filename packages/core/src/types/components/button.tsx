@@ -10,21 +10,21 @@ interface DefaultButtonProps extends ComponentPropsWithoutRef<'button'> {
 interface BtnLabelProps {
   label: string;
   labelSize?: fontSize;
-  icon: never;
+  icon?: IconProps;
 }
 
 interface BtnIconProps {
-  label: never;
-  labelSize: never;
-  icon?: IconProps;
+  label?: never;
+  labelSize?: never;
+  icon: IconProps;
 }
 
 type ConditionalProps =
   | (BtnLabelProps & {
-      buttonType: 'primary' | 'secondary' | 'badge' | 'flat';
+      buttonType?: 'primary' | 'secondary' | 'badge' | 'flat';
     })
   | (BtnIconProps & {
-      buttonType: 'icon';
+      buttonType?: 'icon';
     });
 
 export type ButtonProps = DefaultButtonProps & ConditionalProps;

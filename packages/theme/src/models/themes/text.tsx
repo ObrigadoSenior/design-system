@@ -1,4 +1,4 @@
-export type TThemeText = {
+export type ThemeTextProps = {
   disabledColor: string;
   primaryColor: string;
   secondaryColor: string;
