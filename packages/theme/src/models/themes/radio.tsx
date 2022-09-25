@@ -1,4 +1,4 @@
-export type TThemeRadio = {
+export type ThemeRadioProps = {
   backgroundColor: string;
   disabledBackgroundColor: string;
   checkmarkColor: string;

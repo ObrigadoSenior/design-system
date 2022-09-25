@@ -1,7 +1,7 @@
-import { TThemeRadio } from '../models';
+import { ThemeRadioProps } from '../models';
 
 interface ISetRadioTheme {
-  radio: TThemeRadio;
+  radio: ThemeRadioProps;
   style: CSSStyleDeclaration;
 }
 

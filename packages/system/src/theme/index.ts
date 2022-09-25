@@ -1,10 +1,10 @@
-import { ITheme } from '@obrigadosenior/theme';
+import { ThemeProps } from '@obrigadosenior/theme';
 import { travelColors, sizes, metrics } from '../../../../travelTheme';
 
 const { tjara, silver, moln } = travelColors || {};
 const { xsmall, small } = sizes || {};
 
-export const systemTheme: ITheme = {
+export const systemTheme: ThemeProps = {
   metrics,
   modal: {
     backgroundColor: moln,

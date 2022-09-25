@@ -1,7 +1,7 @@
-import { cleanup, render } from '@testing-library/react';
 import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { Icon } from '.';
-import { IconProps } from '../../types';
 
 const svgIcon = (
   <svg viewBox="0 0 20 20">
@@ -9,13 +9,21 @@ const svgIcon = (
   </svg>
 );
 
-afterEach(cleanup);
+export default {
+  title: 'Core/Icon',
+  component: Icon,
+} as ComponentMeta<typeof Icon>;
 
-const IconComp = (props: Partial<IconProps>) => <Icon icon={<>{svgIcon}</>} {...props} />;
+const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
-describe('Icon', () => {
-  test('sets icon', () => {
-    const { getByTestId } = render(<IconComp />);
-    expect(getByTestId('icon').querySelector('svg')).toBeDefined();
-  });
-});
+export const Default = Template.bind({});
+Default.args = {
+  icon: <>{svgIcon}</>,
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  type: 'secondary',
+  size: 's',
+  icon: <>{svgIcon}</>,
+};

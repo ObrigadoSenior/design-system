@@ -1,7 +1,7 @@
-import { TThemeCheckbox } from '../models';
+import { ThemeCheckboxProps } from '../models';
 
 interface ISetCheckboxTheme {
-  checkbox: TThemeCheckbox;
+  checkbox: ThemeCheckboxProps;
   style: CSSStyleDeclaration;
 }
 

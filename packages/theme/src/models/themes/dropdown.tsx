@@ -1,26 +1,26 @@
-export type TThemeDropdownContent = {
+export type ThemeDropdownContentProps = {
   borderRadius: string;
   height: string;
   transitionSpeed: string;
   backgroundColor: string;
 };
 
-type TThemeDropdownItem = {
+type ThemeDropdownItemProps = {
   backgroundColor: string;
   borderColor: string;
   textColor: string;
   iconColor: string;
 };
 
-export type TThemeDropdownContentItem = {
+export type ThemeDropdownContentItemProps = {
   height: string;
-  neutral: TThemeDropdownItem;
-  active: TThemeDropdownItem;
-  disabled: TThemeDropdownItem;
+  neutral: ThemeDropdownItemProps;
+  active: ThemeDropdownItemProps;
+  disabled: ThemeDropdownItemProps;
 };
 
-export type TThemeDropdown = {
-  content: TThemeDropdownContent & {
-    item: TThemeDropdownContentItem;
+export type ThemeDropdownProps = {
+  content: ThemeDropdownContentProps & {
+    item: ThemeDropdownContentItemProps;
   };
 };

@@ -1,10 +1,10 @@
-import { ITheme } from '@obrigadosenior/theme';
+import { ThemeProps } from '@obrigadosenior/theme';
 import { travelColors, sizes, metrics } from '../../../../travelTheme';
 
 const { modernRed, tjara, silver, silverLight, moln } = travelColors || {};
 const { xsmall, small, large, xlarge } = sizes || {};
 
-export const formsTheme: ITheme = {
+export const formsTheme: ThemeProps = {
   metrics,
   input: {
     backgroundColor: moln,

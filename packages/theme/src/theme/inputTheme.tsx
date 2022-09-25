@@ -1,7 +1,7 @@
-import { TThemeInput } from '../models';
+import { ThemeInputProps } from '../models';
 
 interface ISetInputTheme {
-  input: TThemeInput;
+  input: ThemeInputProps;
   style: CSSStyleDeclaration;
 }
 

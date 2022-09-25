@@ -1,7 +1,7 @@
-import { TThemeSystem } from '../models';
+import { ThemeSystemProps } from '../models';
 
 interface ISetSystemTheme {
-  system: TThemeSystem;
+  system: ThemeSystemProps;
   style: CSSStyleDeclaration;
 }
 
@@ -12,6 +12,8 @@ export const setSystemTheme = ({ system, style }: ISetSystemTheme): void => {
       style.setProperty('--system-background-color', colors.background);
       style.setProperty('--system-primary-color', colors.primary);
       style.setProperty('--system-secondary-color', colors.secondary);
+      style.setProperty('--system-secondary-accent-color', colors.secondaryAccent);
+      style.setProperty('--system-primary-accent-color', colors.primaryAccent);
     }
   }
 };

@@ -1,30 +1,32 @@
 import React from 'react';
-import { IButtonProps } from '../../models';
+import cx from 'classnames';
+import { ButtonProps } from '../../types';
+import { Icon } from '../icon';
 import { Text } from '../text';
-import './buttonStyle.css';
+import styles from './Button.module.scss';
 
 export const Button = ({
   className = '',
   label,
-  buttonType,
-  size = 'm',
-  labelSize = 'xs',
-  fullWidth = false,
-  leftIcon,
-  rightIcon,
-  innerRef,
+  buttonType = 'primary',
+  labelSize = 's',
+  width = 'auto',
+  icon,
   ...rest
-}: IButtonProps): JSX.Element => (
-  <button
-    className={`button button-${buttonType} button--size-${size} button--label-size-${labelSize} ${
-      fullWidth ? 'button-full-width' : ''
-    } ${className}`}
-    ref={innerRef}
-    data-testid="button"
-    {...rest}
-  >
-    <Text className="button-label" size={labelSize} leftIcon={leftIcon} rightIcon={rightIcon}>
-      {label}
-    </Text>
-  </button>
-);
+}: ButtonProps): JSX.Element => {
+  return (
+    <button
+      className={cx(styles.button, styles[buttonType], className)}
+      style={{ width }}
+      data-testid="button"
+      {...rest}
+    >
+      {icon ? <Icon className={cx(styles.icon)} size={labelSize} {...icon} /> : null}
+      {label ? (
+        <Text tag="span" className={cx(styles.label, icon ? styles.margin : null)} size={labelSize}>
+          {label}
+        </Text>
+      ) : null}
+    </button>
+  );
+};

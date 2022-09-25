@@ -1,4 +1,4 @@
-export type TThemeText = {
+export type ThemeTextProps = {
   disabledColor: string;
   primaryColor: string;
   secondaryColor: string;
@@ -8,7 +8,6 @@ export type TThemeText = {
   fontSizeL: string;
   fontSizeXl: string;
   fontWeightLight: string;
-  fontWeightRegular: string;
   fontWeightMedium: string;
   fontWeightBold: string;
 };

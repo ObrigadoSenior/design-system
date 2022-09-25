@@ -1,4 +1,4 @@
-export type TThemeModal = {
+export type ThemeModalProps = {
   backgroundColor: string;
   borderColor: string;
   color: string;
