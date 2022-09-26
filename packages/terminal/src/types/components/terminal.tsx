@@ -1,5 +1,16 @@
-interface DefaultTextProps {}
+type data = string;
 
-type ConditionalProps = {};
+export type TerminalProps = {
+  path: string;
+  initData: data[];
+};
 
-export type TerminalProps = DefaultTextProps & ConditionalProps;
+export type TerminalTopPanelProps = {
+  title: string;
+};
+
+export type TerminalContentProps = Pick<TerminalProps, 'initData' | 'path'>;
+
+export type TerminalContentItemProps = Pick<TerminalProps, 'path'> & {
+  setData: (data: data) => void;
+};

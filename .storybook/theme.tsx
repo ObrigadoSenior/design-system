@@ -1,5 +1,19 @@
 import { AddTheme, ThemeProps } from '@obrigadosenior/theme';
 
+const sizes = {
+  sizeNone: `0`,
+  sizeXs: `0.25em`,
+  sizeS: `0.75em`,
+  sizeM: `1.5em`,
+  sizeL: `2.5em`,
+  sizeXl: `4.5em`,
+};
+
+const width = {
+  min: '300px',
+  max: '1170px',
+};
+
 const defaultBtn = {
   borderRadius: '3px',
   padding: `0.5em 2em`,
@@ -52,10 +66,24 @@ const modal = {
   overlayColor: 'rgba(0,0,0,0.25)',
 } as ThemeProps['modal'];
 
+const system: ThemeProps['system'] = {
+  colors: {
+    primary: '#f8f8f8',
+    secondary: '#4a4a4a',
+    background: 'rgb(31, 32, 35)',
+    primaryAccent: 'rgb(40, 40, 40)',
+    secondaryAccent: 'rgb(90, 90, 90)',
+  },
+};
+
 export const theme: ThemeProps = {
+  metrics: {
+    sizes,
+    width,
+  },
   text: {
     primaryColor: 'black',
-    secondaryColor: 'green',
+    secondaryColor: 'white',
     disabledColor: 'grey',
     fontSizeXs: '0.75rem',
     fontSizeS: '0.95rem',
@@ -69,6 +97,7 @@ export const theme: ThemeProps = {
   button,
   icon,
   modal,
+  system,
 };
 
 export const SetTheme = () => AddTheme({ theme });

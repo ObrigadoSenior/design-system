@@ -1,47 +1,11 @@
-.text {
-  &.p,
-  &.span,
-  &.a,
-  &.h1,
-  &.h2,
-  &.h3,
-  &.h4,
-  &.h5,
-  &.h6 {
-    margin: 0;
-    padding: 0;
-  }
-  &.xs {
-    font-size: var(--text-size-xs);
-  }
-  &.s {
-    font-size: var(--text-size-s);
-  }
-  &.m {
-    font-size: var(--text-size-m);
-  }
-  &.l {
-    font-size: var(--text-size-l);
-  }
-  &.xl {
-    font-size: var(--text-size-xl);
-  }
-  &.primary {
-    color: var(--text-color-primary);
-  }
-  &.secondary {
-    color: var(--text-color-secondary);
-  }
-  &.disabled {
-    color: var(--text-color-disabled);
-  }
-  &.light {
-    font-weight: var(--text-weight-light);
-  }
-  &.medium {
-    font-weight: var(--text-weight-medium);
-  }
-  &.bold {
-    font-weight: var(--text-weight-bold);
-  }
+.terminal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 50vh;
+  background-color: var(--system-background-color);
+  border-radius: var(--metrics-size-s);
+  border: 1px solid var(--system-primary-accent-color);
+  overflow: auto;
 }
