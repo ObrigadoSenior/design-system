@@ -1,84 +1,80 @@
-import cx from 'classnames';
 import React, { useState } from 'react';
-import { Text } from '@obrigadosenior/core';
 
-import styles from './NewData.module.scss';
-import { TerminalContentItemProps } from '../../../types';
-import { drop, split, includes, take } from 'ramda';
+import { find, split, whereEq } from 'ramda';
+import { TerminalContentExistingDataProps, TerminalContentItemProps } from '../../../types';
+import { Input } from '../input';
 
-const getDate = new Intl.DateTimeFormat('en-GB', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  weekday: 'short',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
-}).format(new Date());
+type CmdProps = 'run' | 'exit' | null;
+type CmdSuffixProps = '-v' | '-h' | null;
 
-const commands: string[] = ['run', 'exit'];
-const commandsSuffix: string[] = ['lines', 'bad'];
+interface CmdsProps {
+  cmd: CmdProps;
+  suffix: CmdSuffixProps;
+  data: string[];
+}
 
-export const NewData = ({ path, setData }: TerminalContentItemProps): JSX.Element => {
-  const [newData, setNewData] = useState<string>('');
-  const [firstLine, setFirstLine] = useState<string>('');
+const cmds: CmdsProps[] = [
+  {
+    cmd: 'run',
+    suffix: '-h',
+    data: ['Need help?', "I'm having trouble as well", 'Plz, help!'],
+  },
+];
 
-  const command: boolean = includes(firstLine, commands);
+export const NewData = ({ path, setData, date }: TerminalContentItemProps): JSX.Element => {
+  const [newData, setNewData] = useState<string[]>([]);
+
+  const [runCmd, setRunCmd] = useState<Pick<CmdsProps, 'cmd' | 'suffix'>>({
+    cmd: null,
+    suffix: null,
+  });
+
+  const getCommandData = () => {
+    const pred = whereEq(runCmd);
+    const { data } = find((data) => pred(data), cmds) || {};
+    return data;
+  };
+
+  const correctCmd = () => getCommandData() !== undefined;
 
   const onChangeInput = (currentTarget: EventTarget & HTMLInputElement) => {
     const { value } = currentTarget;
-    const splitData = split(' ', value);
-    const firstSplit = take(1, splitData).toString();
-
-    let nd = value;
-    if (includes(firstSplit, commands)) {
-      setFirstLine(firstSplit);
-      nd = drop(1, splitData).toString();
-    } else if (splitData.length === 1 && includes(firstLine, commands)) {
-      nd = firstLine;
-      setFirstLine('');
+    const sd = split(' ', value);
+    setNewData(sd);
+    if (sd.length <= 1) {
+      setRunCmd({ ...runCmd, cmd: sd[0] as CmdProps });
+    } else if (sd.length >= 2) {
+      setRunCmd({ ...runCmd, suffix: sd[1] as CmdSuffixProps });
     }
-    setNewData(nd);
   };
 
   const onKeyPressed = (key: string) => {
     if (key === 'Enter') {
-      let nd = newData;
-      if (command) {
-        nd = `${firstLine} ${newData}`;
-        console.log('Command should be run');
+      let data: TerminalContentExistingDataProps['data'] = [`${newData.join(' ')}: This looks weird!`];
+      if (correctCmd()) {
+        data = getCommandData() as string[];
+        console.log('Command should be run', data);
       }
-      setData(nd);
-      setNewData('');
-      setFirstLine('');
+      setData({
+        cmd: newData.join(' '),
+        data,
+        date,
+        id: new Date().getMilliseconds().toString() + date,
+      });
+      setNewData([]);
+      setRunCmd({ cmd: null, suffix: null });
     }
   };
 
   return (
-    <li key="new input" className={styles.content_item}>
-      <div className={styles.path}>
-        <Text className={styles.text} tag="span">
-          {path}
-        </Text>
-        <Text className={cx(styles.text, styles.branch, command ? styles.rainbow : null)} tag="span">
-          online
-        </Text>
-      </div>
-      {command ? (
-        <Text tag="span" className={cx(styles.text, styles.command)}>
-          {firstLine}
-        </Text>
-      ) : null}
-      <input
-        autoFocus={true}
-        value={newData}
-        className={styles.input}
-        onChange={({ currentTarget }) => onChangeInput(currentTarget)}
-        onKeyDown={({ key }) => onKeyPressed(key)}
-      />
-      <Text className={cx(styles.text, styles.date, newData === '' ? null : styles.hide)} tag="span">
-        {getDate}
-      </Text>
-    </li>
+    <Input
+      path={path}
+      date={date}
+      cmd={newData.join(' ')}
+      autoFocus={true}
+      onChange={({ currentTarget }) => onChangeInput(currentTarget)}
+      onKeyDown={({ key }) => onKeyPressed(key)}
+      cmdExists={correctCmd()}
+    />
   );
 };

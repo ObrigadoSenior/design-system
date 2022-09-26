@@ -82,8 +82,8 @@ export const theme: ThemeProps = {
     width,
   },
   text: {
-    primaryColor: 'black',
-    secondaryColor: 'white',
+    primaryColor: 'white',
+    secondaryColor: 'black',
     disabledColor: 'grey',
     fontSizeXs: '0.75rem',
     fontSizeS: '0.95rem',
