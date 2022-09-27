@@ -1,63 +1,51 @@
 import React, { useState } from 'react';
 
-import { find, split, whereEq } from 'ramda';
-import { TerminalContentExistingDataProps, TerminalContentItemProps } from '../../../types/components/content';
+import { find, isEmpty, isNil, split, whereEq } from 'ramda';
+import { CmdProps } from '../../../types';
+import { TerminalContentItemProps } from '../../../types/components/content';
 import { Input } from '../input';
 
-type CmdProps = 'run' | 'exit' | null;
-type CmdSuffixProps = '-v' | '-h' | null;
-
-interface CmdsProps {
-  cmd: CmdProps;
-  suffix: CmdSuffixProps;
-  data: string[];
-}
-
-const cmds: CmdsProps[] = [
-  {
-    cmd: 'run',
-    suffix: '-h',
-    data: ['Need help?', "I'm having trouble as well", 'Plz, help!'],
-  },
-];
-
-export const NewData = ({ path, setData, date }: TerminalContentItemProps): JSX.Element => {
+export const NewData = ({ path, setData, date, cmds = [] }: TerminalContentItemProps): JSX.Element => {
   const [newData, setNewData] = useState<string[]>([]);
 
-  const [runCmd, setRunCmd] = useState<Pick<CmdsProps, 'cmd' | 'suffix'>>({
+  const [runCmd, setRunCmd] = useState<Pick<CmdProps, 'cmd' | 'suffix'>>({
     cmd: null,
     suffix: null,
   });
 
   const getCommandData = () => {
     const pred = whereEq(runCmd);
-    const { data } = find((data) => pred(data), cmds) || {};
-    return data;
+    let { data } = find((data) => pred(data), cmds) || {};
+    const correctCmd = data !== undefined;
+    if (data === undefined) {
+      data = [
+        {
+          value: `${newData.join(' ')}: This looks weird!`,
+          process: 'instant',
+        },
+      ];
+    }
+    return { data, correctCmd };
   };
 
-  const correctCmd = () => getCommandData() !== undefined;
+  const { correctCmd } = getCommandData();
 
   const onChangeInput = (currentTarget: EventTarget & HTMLInputElement) => {
     const { value } = currentTarget;
     const sd = split(' ', value);
     setNewData(sd);
     if (sd.length <= 1) {
-      setRunCmd({ ...runCmd, cmd: sd[0] as CmdProps });
+      setRunCmd({ ...runCmd, cmd: sd[0] });
     } else if (sd.length >= 2) {
-      setRunCmd({ ...runCmd, suffix: sd[1] as CmdSuffixProps });
+      setRunCmd({ ...runCmd, suffix: sd[1] });
     }
   };
 
   const onKeyPressed = (key: string) => {
     if (key === 'Enter') {
-      let data: TerminalContentExistingDataProps['data'] = [`${newData.join(' ')}: This looks weird!`];
-      if (correctCmd()) {
-        data = getCommandData() as string[];
-        console.log('Command should be run', data);
-      }
       setData({
         cmd: newData.join(' '),
-        data,
+        data: getCommandData().data,
         date,
         id: new Date().getMilliseconds().toString() + date,
       });
@@ -74,7 +62,7 @@ export const NewData = ({ path, setData, date }: TerminalContentItemProps): JSX.
       autoFocus={true}
       onChange={({ currentTarget }) => onChangeInput(currentTarget)}
       onKeyDown={({ key }) => onKeyPressed(key)}
-      cmdExists={correctCmd()}
+      cmdExists={correctCmd}
     />
   );
 };

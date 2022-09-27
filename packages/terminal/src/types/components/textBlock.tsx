@@ -1,8 +1,9 @@
 import { TextProps } from '@obrigadosenior/core';
-import { data } from './content';
+import { CmdDataProps } from './terminal';
 
 export type TerminalTextBlockProps = {
-  data: data[];
+  data: CmdDataProps[];
+  setShowNewData: (bool: boolean) => void;
 };
 
 export type TerminalTextProps = TextProps;

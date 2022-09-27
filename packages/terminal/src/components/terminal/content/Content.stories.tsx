@@ -11,7 +11,7 @@ export default {
 const Template: ComponentStory<typeof Cnt> = (args) => {
   const { host, pathname } = window.location || {};
   const path = `${host}${pathname}`;
-  return <Cnt {...args} path={path} initData={[]} />;
+  return <Cnt {...args} path={path} data={[]} />;
 };
 
 export const Content = Template.bind({});

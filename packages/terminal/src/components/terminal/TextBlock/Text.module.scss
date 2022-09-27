@@ -3,3 +3,8 @@
   font-weight: var(--text-weight-medium);
   color: var(--system-primary-color);
 }
+
+.list {
+  flex-direction: column;
+  align-items: flex-start;
+}

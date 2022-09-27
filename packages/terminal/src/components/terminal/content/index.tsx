@@ -17,15 +17,22 @@ const getNewDate = () =>
     second: 'numeric',
   }).format(new Date());
 
-export const Content = ({ path, data = [] }: TerminalContentProps): JSX.Element => {
+export const Content = ({ path, data = [], cmds = [] }: TerminalContentProps): JSX.Element => {
+  const [showNewData, setShowNewData] = useState<boolean>(true);
+
   const [allData, setAllData] = useState<TerminalContentExistingDataProps[]>(data);
 
-  const renderData = map((d) => <ExistingData {...d} key={d.id} path={path} />, allData);
+  const renderData = map(
+    (d) => <ExistingData {...d} key={d.id} path={path} setShowNewData={(bool) => setShowNewData(bool)} />,
+    allData,
+  );
 
   return (
     <ul className={styles.content}>
       {renderData}
-      <NewData path={path} date={getNewDate()} setData={(newData) => setAllData([...allData, newData])} />
+      {showNewData ? (
+        <NewData path={path} cmds={cmds} date={getNewDate()} setData={(newData) => setAllData([...allData, newData])} />
+      ) : null}
     </ul>
   );
 };
