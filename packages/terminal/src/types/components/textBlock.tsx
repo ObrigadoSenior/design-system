@@ -1,5 +1,5 @@
 import { TextProps } from '@obrigadosenior/core';
-import { data } from './terminal';
+import { data } from './content';
 
 export type TerminalTextBlockProps = {
   data: data[];

@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React from 'react';
+import { TerminalDataInputProps } from '../../../types/components/input';
 
-import { TerminalDataInputProps } from '../../../types';
 import { TerminalList } from '../list';
 import { TerminalText } from '../TextBlock';
 import styles from './Input.module.scss';

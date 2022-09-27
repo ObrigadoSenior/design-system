@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { TerminalContentExistingDataProps, TerminalProps } from '../../../types';
+import { TerminalProps } from '../../../types';
+import { TerminalContentExistingDataProps } from '../../../types/components/content';
 import { Input } from '../input';
 import { TextBlock } from '../TextBlock';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { find, split, whereEq } from 'ramda';
-import { TerminalContentExistingDataProps, TerminalContentItemProps } from '../../../types';
+import { TerminalContentExistingDataProps, TerminalContentItemProps } from '../../../types/components/content';
 import { Input } from '../input';
 
 type CmdProps = 'run' | 'exit' | null;

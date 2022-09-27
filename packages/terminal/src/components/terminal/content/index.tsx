@@ -1,10 +1,10 @@
 import { map } from 'ramda';
 import React, { useState } from 'react';
+import { TerminalContentExistingDataProps, TerminalContentProps } from '../../../types/components/content';
+import { ExistingData } from '../data/existingData';
+import { NewData } from '../data/newData';
 
-import { TerminalContentExistingDataProps, TerminalContentProps } from '../../../types';
 import styles from './Content.module.scss';
-import { ExistingData } from './existingData';
-import { NewData } from './newData';
 
 const getNewDate = () =>
   new Intl.DateTimeFormat('en-GB', {
@@ -17,15 +17,15 @@ const getNewDate = () =>
     second: 'numeric',
   }).format(new Date());
 
-export const Content = ({ path, initData = [] }: TerminalContentProps): JSX.Element => {
-  const [data, setData] = useState<TerminalContentExistingDataProps[]>(initData);
+export const Content = ({ path, data = [] }: TerminalContentProps): JSX.Element => {
+  const [allData, setAllData] = useState<TerminalContentExistingDataProps[]>(data);
 
-  const renderData = map((data) => <ExistingData {...data} key={data.id} path={path} />, data);
+  const renderData = map((d) => <ExistingData {...d} key={d.id} path={path} />, allData);
 
   return (
     <ul className={styles.content}>
-      {data.length ? renderData : null}
-      <NewData path={path} date={getNewDate()} setData={(newData) => setData([...data, newData])} />
+      {renderData}
+      <NewData path={path} date={getNewDate()} setData={(newData) => setAllData([...allData, newData])} />
     </ul>
   );
 };
