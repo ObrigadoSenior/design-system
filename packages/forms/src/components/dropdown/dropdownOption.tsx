@@ -1,7 +1,9 @@
 import React from 'react';
-import { IDropdownOption, IDropdownOptionsProps } from '../../models/components/dropdown';
+import cx from 'classnames';
+
+import { DropdownOptionProps, DropdownOptionsProps } from '../../types/components/dropdown';
 import { Text } from '@obrigadosenior/core';
-import './dropdownStyle.css';
+import styles from './Dropdown.module.scss';
 
 export const DropdownOption = ({
   onOptionsClick,
@@ -9,12 +11,12 @@ export const DropdownOption = ({
   open,
   setOpen,
   ...rest
-}: IDropdownOption &
-  Pick<IDropdownOptionsProps, 'activeOption' | 'onOptionsClick'> & {
+}: DropdownOptionProps &
+  Pick<DropdownOptionsProps, 'activeOption' | 'onOptionsClick'> & {
     open: boolean;
     setOpen: () => void;
   }): JSX.Element => {
-  const { disabled, id, leftIcon, rightIcon, iconSize, title } = rest || {};
+  const { disabled, id, icon, title } = rest || {};
   const onPress = () => {
     onOptionsClick({ ...rest });
     setOpen();
@@ -29,14 +31,9 @@ export const DropdownOption = ({
       onKeyDown={({ key }) => {
         if (key === 'Enter' || key === 'Escape') onPress();
       }}
-      className={`dropdown-content-button ${activeOption !== null && activeOption.id === id ? 'active' : ''}`}
+      className={cx(styles.dropdown_content_button, activeOption?.id === id ? styles.active : null)}
     >
-      <Text
-        className="title"
-        size="s"
-        leftIcon={leftIcon ? { icon: leftIcon, size: iconSize || 'm' } : undefined}
-        rightIcon={rightIcon ? { icon: rightIcon, size: iconSize || 'm' } : undefined}
-      >
+      <Text className={styles.title} size="s">
         {title}
       </Text>
     </button>

@@ -1,7 +1,7 @@
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Checkbox as TestComponent } from '.';
-import { ICheckboxProps as TestComponentProps } from '../../models';
+import { CheckboxProps as TestComponentProps } from '../../types';
 import { OverrideWithOptional } from '../../../../../utils/functions/overrideWIthOptional';
 
 type DefaultProps = Pick<TestComponentProps, 'label' | 'onChange'>;

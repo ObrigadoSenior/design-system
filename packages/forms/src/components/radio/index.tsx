@@ -1,9 +1,9 @@
 import React from 'react';
-import { IRadioProps } from '../../models';
+import { RadioProps } from '../../types';
 import { Text } from '@obrigadosenior/core';
 import './radioStyle.css';
 
-export const Radio: React.FC<IRadioProps> = ({ className = '', label, onChange, ...rest }) => {
+export const Radio = ({ className = '', label, onChange, ...rest }: RadioProps): JSX.Element => {
   return (
     <label data-testid="radio" className={`radio-label ${className}`}>
       <input

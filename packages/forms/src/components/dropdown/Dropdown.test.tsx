@@ -2,22 +2,22 @@ import { cleanup, render, waitFor, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Dropdown as TestComponent } from '.';
 import { OverrideWithOptional } from '../../../../../utils/functions/overrideWIthOptional';
-import { IDropdownOption, IDropdownProps as TestComponentProps } from '../../models';
+import { DropdownOptionProps, DropdownProps as TestComponentProps } from '../../types';
 
-const options: IDropdownOption[] = [
+const options: DropdownOptionProps[] = [
   {
     title: 'Option 1',
     value: 'option1',
     id: 'opt1',
     data: '1',
-    leftIcon: <></>,
+    icon: { icon: <></> },
   },
   {
     title: 'Option 2',
     value: 'option2',
     id: 'opt2',
     data: '2',
-    leftIcon: <></>,
+    icon: { icon: <></> },
     disabled: true,
   },
 ];
