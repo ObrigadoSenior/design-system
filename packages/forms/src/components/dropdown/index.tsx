@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import cx from 'classnames';
+
 import { useFilterOptions } from '../../hooks/dropdown/useFilterOptions';
-import { IDropdownProps } from '../../models';
+import { DropdownProps } from '../../types';
 import { Input } from '../input';
 import { DropdownOption } from './dropdownOption';
-import './dropdownStyle.css';
+import styles from './Dropdown.module.scss';
 
 export const Dropdown = ({
-  className = '',
+  className,
   onChange,
-  options,
+  options = [],
   onOptionClick,
   onToggleOpen,
   ...rest
-}: IDropdownProps): JSX.Element => {
+}: DropdownProps): JSX.Element => {
   const { activeOption, filteredOptions, onSetFilteredOptions, onClickFilterOptions } = useFilterOptions({ options });
   const [open, setOpen] = useState<boolean>(false);
   const { title } = activeOption || {};
@@ -37,7 +39,12 @@ export const Dropdown = ({
   return (
     <div
       data-testid="dropdown"
-      className={`dropdown-wrapper ${className} ${open ? 'open' : 'close'} ${rest.disabled ? 'disabled' : ''}`}
+      className={cx(
+        styles.dropdown_wrapper,
+        className,
+        open ? styles.open : styles.close,
+        rest.disabled ? styles.disabled : null,
+      )}
     >
       <Input
         defaultValue={title}
@@ -49,8 +56,8 @@ export const Dropdown = ({
         }}
         {...rest}
       />
-      <div data-testid="dropdown-content" className={`dropdown-content ${open ? 'open' : 'close'}`}>
-        <ul data-testid="dropdown-content-ul" className="dropdown-inner-content">
+      <div data-testid="dropdown-content" className={cx(styles.dropdown_content, open ? styles.open : styles.close)}>
+        <ul data-testid="dropdown-content-ul" className={styles.dropdown_inner_content}>
           {filteredOptions && renderOptions}
         </ul>
       </div>

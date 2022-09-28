@@ -1,14 +1,13 @@
-import { IIconProps } from '@obrigadosenior/core';
+import { IconProps } from '@obrigadosenior/core';
 import { size } from '../../../../../utils';
 
-export type IInputProps = {
+export type InputProps = {
   title: string;
   placeholder: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick?: () => void;
   padding?: string;
-  leftIcon?: IIconProps['icon'];
-  rightIcon?: IIconProps['icon'];
+  icon?: IconProps;
   height?: size;
   className?: string;
   defaultValue?: string;

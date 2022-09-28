@@ -1,16 +1,16 @@
 import { useCallback, useState } from 'react';
-import { IDropdownOption, IUseFilterOptions } from '../../models/components/dropdown';
+import { DropdownOption, UseFilterOptions } from '../../types/components/dropdown';
 
 export const useFilterOptions = ({
   options,
-}: IUseFilterOptions): {
-  activeOption: IDropdownOption | null;
-  filteredOptions: IDropdownOption[];
+}: UseFilterOptions): {
+  activeOption: DropdownOption | null;
+  filteredOptions: DropdownOption[];
   onSetFilteredOptions: (value: string) => void;
   onClickFilterOptions: (pickedId: string) => void;
 } => {
-  const [filteredOptions, setFilteredOptions] = useState<IUseFilterOptions['options']>(options);
-  const [activeOption, setActiveOption] = useState<IDropdownOption | null>(null);
+  const [filteredOptions, setFilteredOptions] = useState<UseFilterOptions['options']>(options);
+  const [activeOption, setActiveOption] = useState<DropdownOption | null>(null);
 
   const onSetFilteredOptions = useCallback((value: string) => {
     const newOptions = filteredOptions.filter(({ title = '' }) => {

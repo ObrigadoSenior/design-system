@@ -1,20 +1,22 @@
 import React from 'react';
-import { ICheckboxProps } from '../../models';
-import { Text } from '@obrigadosenior/core';
-import './checkboxStyle.css';
+import cx from 'classnames';
 
-export const Checkbox: React.FC<ICheckboxProps> = ({ className = '', label, onChange, ...rest }) => {
+import { CheckboxProps } from '../../types';
+import { Text } from '@obrigadosenior/core';
+import styles from './Checkbox.module.scss';
+
+export const Checkbox = ({ className = '', label, onChange, ...rest }: CheckboxProps): JSX.Element => {
   return (
-    <label data-testid="checkbox" className={`checkbox-label ${className}`}>
+    <label data-testid="checkbox" className={cx(styles.checkbox_label, className)}>
       <input
         data-testid="input"
-        className="checkbox-input"
+        className={styles.checkbox_input}
         onChange={(event) => onChange && onChange(event)}
         {...rest}
         type="checkbox"
       />
-      <span className="checkbox-checkmark" />
-      <Text className="checkbox-label">{label}</Text>
+      <span className={styles.checkbox_checkmark} />
+      <Text className={styles.checkbox_label}>{label}</Text>
     </label>
   );
 };
