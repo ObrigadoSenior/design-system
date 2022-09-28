@@ -8,9 +8,9 @@ import { DropdownOption } from './dropdownOption';
 import styles from './Dropdown.module.scss';
 
 export const Dropdown = ({
-  className = '',
+  className,
   onChange,
-  options,
+  options = [],
   onOptionClick,
   onToggleOpen,
   ...rest
