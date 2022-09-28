@@ -2,18 +2,14 @@ import { cleanup, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Input as TestComponent } from '.';
 import { OverrideWithOptional } from '../../../../../utils/functions/overrideWIthOptional';
-import { IInputProps as TestComponentProps } from '../../models';
+import { InputProps as TestComponentProps } from '../../types';
 
-type DefaultProps = Pick<
-  TestComponentProps,
-  'title' | 'leftIcon' | 'placeholder' | 'rightIcon' | 'defaultValue' | 'onChange' | 'height'
->;
+type DefaultProps = Pick<TestComponentProps, 'title' | 'placeholder' | 'icon' | 'defaultValue' | 'onChange' | 'height'>;
 
 const defaultProps: DefaultProps = {
   title: 'Title',
   placeholder: 'Placeholder',
-  leftIcon: <></>,
-  rightIcon: <></>,
+  icon: { icon: <></> },
   defaultValue: '',
   height: 'xl',
   onChange: () => {},

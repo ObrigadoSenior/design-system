@@ -1,7 +1,9 @@
 import { Icon } from '@obrigadosenior/core';
 import React, { useEffect, useState } from 'react';
+import cx from 'classnames';
+
 import { InputProps } from '../../types';
-import './inputStyle.css';
+import styles from './Input.module.scss';
 
 export const Input = ({
   title,
@@ -24,18 +26,19 @@ export const Input = ({
   return (
     <div
       data-testid="input-wrapper"
-      className={`input-div input-height-${height} ${className} ${rest.disabled ? 'disabled' : ''}`}
+      style={{ height: `var(--metrics-size${height})` }}
+      className={cx(styles.container, className, rest.disabled ? styles.disabled : null)}
     >
       {/* {leftIcon && <Icon className="icon-left" icon={leftIcon} size="m" disabled={rest.disabled} />} */}
-      <div className="input-wrapper">
-        <label data-testid="input-title" className={`input-title ${iconClass}`} htmlFor={title}>
+      <div className={styles.wrapper}>
+        <label data-testid="input-title" className={styles.input_title} htmlFor={title}>
           {title}
         </label>
         <input
           data-testid="input"
           name={title}
           value={val}
-          className={`input ${iconClass}`}
+          className={styles.input}
           ref={inputRef}
           onChange={(event) => {
             onChange && onChange(event);

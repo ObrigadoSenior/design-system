@@ -2,7 +2,7 @@ import { render, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Radio as TestComponent } from '.';
-import { IRadioProps as TestComponentProps } from '../../models';
+import { RadioProps as TestComponentProps } from '../../types';
 import { OverrideWithOptional } from '../../../../../utils/functions/overrideWIthOptional';
 
 type DefaultProps = Pick<TestComponentProps, 'label' | 'onChange'>;
