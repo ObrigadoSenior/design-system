@@ -16,6 +16,6 @@ export type ThemeSizeProps = {
 };
 
 export type ThemeDefaultProps = {
-  colors: ThemeColorsProps;
-  sizes: ThemeSizeProps;
+  colors?: ThemeColorsProps;
+  sizes?: ThemeSizeProps;
 };

@@ -2,18 +2,15 @@ import { cleanup } from '@testing-library/react';
 import { AddTheme } from '.';
 import { coreTheme } from '../../../core';
 import { formsTheme } from '../../../forms';
-import { metrics } from '../../../../travelTheme';
-import { systemTheme } from '../../../system';
 
-AddTheme({ theme: { metrics, ...coreTheme, ...formsTheme, ...systemTheme } });
+AddTheme({ theme: { ...coreTheme, ...formsTheme } });
 afterEach(cleanup);
 
 const { style } = document.documentElement || {};
 const getStyle = (value: string) => (style.getPropertyValue(value) ? true : false);
 
 describe('Theme', () => {
-  test('sets metrics', () => {
-    expect(getStyle('--metrics-min-width')).toBeTruthy();
+  test('sets default', () => {
     expect(getStyle('--system-size-xs')).toBeTruthy();
     expect(getStyle('--system-size-xl')).toBeTruthy();
   });
@@ -51,10 +48,5 @@ describe('Theme', () => {
     expect(getStyle('--text-color-disabled')).toBeTruthy();
     expect(getStyle('--text-size-s')).toBeTruthy();
     expect(getStyle('--text-weight-light')).toBeTruthy();
-  });
-  test('sets modal', () => {
-    expect(getStyle('--modal-color')).toBeTruthy();
-    expect(getStyle('--modal-border-color')).toBeTruthy();
-    expect(getStyle('--modal-shadow')).toBeTruthy();
   });
 });
