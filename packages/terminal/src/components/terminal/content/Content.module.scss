@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: var(--metrics-size-s);
+  overflow-y: auto;
+}

@@ -1,0 +1,23 @@
+.meter {
+  position: relative;
+  height: var(--metrics-size-xs);
+  background: transparent;
+  overflow: hidden;
+  width: 100%;
+  > .progress {
+    background-color: var(--system-secondary-accent-color);
+    animation: progressBar 3s ease-in-out;
+    animation-fill-mode: both;
+    height: 100%;
+    display: block;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

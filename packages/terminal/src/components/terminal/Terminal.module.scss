@@ -1,0 +1,11 @@
+.terminal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 50vh;
+  background-color: var(--system-background-color);
+  border-radius: var(--metrics-size-s);
+  border: 1px solid var(--system-primary-accent-color);
+  overflow: auto;
+}

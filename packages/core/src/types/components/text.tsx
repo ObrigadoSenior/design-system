@@ -17,16 +17,16 @@ interface DefaultTextProps {
 
 type ConditionalProps =
   | (TxtPProps & {
-      tag: 'p';
+      tag?: 'p';
     })
   | (TxtAProps & {
-      tag: 'a';
+      tag?: 'a';
     })
   | (TxtSpanProps & {
-      tag: 'span';
+      tag?: 'span';
     })
   | (TxtHeaderProps & {
-      tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+      tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     });
 
 export type TextProps = DefaultTextProps & ConditionalProps;
