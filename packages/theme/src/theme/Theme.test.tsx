@@ -14,8 +14,8 @@ const getStyle = (value: string) => (style.getPropertyValue(value) ? true : fals
 describe('Theme', () => {
   test('sets metrics', () => {
     expect(getStyle('--metrics-min-width')).toBeTruthy();
-    expect(getStyle('--metrics-size-xs')).toBeTruthy();
-    expect(getStyle('--metrics-size-xl')).toBeTruthy();
+    expect(getStyle('--system-size-xs')).toBeTruthy();
+    expect(getStyle('--system-size-xl')).toBeTruthy();
   });
   test('sets button', () => {
     expect(getStyle('--button-primary-color')).toBeTruthy();

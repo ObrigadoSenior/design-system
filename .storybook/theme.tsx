@@ -1,4 +1,11 @@
-import { AddTheme, ThemeProps } from '@obrigadosenior/theme';
+import {
+  AddTheme,
+  ThemeButtonProps,
+  ThemeColorsProps,
+  ThemeCoreProps,
+  ThemeFormsProps,
+  ThemeProps,
+} from '@obrigadosenior/theme';
 
 const sizes = {
   sizeNone: `0`,
@@ -23,18 +30,12 @@ const button = {
   primary: {
     ...defaultBtn,
     backgroundColor: 'purple',
+    borderColor: 'yellow',
+    textColor: 'white',
   },
   secondary: {
     ...defaultBtn,
     backgroundColor: 'green',
-  },
-  flat: {
-    ...defaultBtn,
-    backgroundColor: 'blue',
-  },
-  badge: {
-    ...defaultBtn,
-    backgroundColor: 'yellow',
   },
   icon: {
     ...defaultBtn,
@@ -42,7 +43,7 @@ const button = {
     padding: `1em`,
     borderRadius: '50%',
   },
-} as ThemeProps['button'];
+} as ThemeCoreProps['button'];
 
 const icon = {
   primaryColor: 'red',
@@ -53,32 +54,19 @@ const icon = {
   sizeM: '3em',
   sizeL: '4em',
   sizeXl: '5em',
-} as ThemeProps['icon'];
+} as ThemeCoreProps['icon'];
 
-const modal = {
-  backgroundColor: 'red',
-  borderColor: 'blue',
-  borderRadius: `6px`,
-  color: 'black',
-  padding: `15px`,
-  shadow: 'yellow',
-  transitionSpeed: '500ms',
-  overlayColor: 'rgba(0,0,0,0.25)',
-} as ThemeProps['modal'];
-
-const system: ThemeProps['system'] = {
-  colors: {
-    primary: '#f8f8f8',
-    secondary: '#4a4a4a',
-    background: 'rgb(31, 32, 35)',
-    primaryAccent: 'rgb(40, 40, 40)',
-    secondaryAccent: 'rgb(90, 90, 90)',
-  },
+const colors: ThemeColorsProps = {
+  primary: '#f8f8f8',
+  secondary: '#4a4a4a',
+  background: 'rgb(31, 32, 35)',
+  primaryAccent: 'rgb(40, 40, 40)',
+  secondaryAccent: 'rgb(90, 90, 90)',
 };
 
-const { primary, secondary, background, primaryAccent, secondaryAccent } = system.colors;
+const { primary, secondary, background, primaryAccent, secondaryAccent } = colors;
 
-export const forms: ThemeProps = {
+export const forms: ThemeFormsProps = {
   input: {
     backgroundColor: background,
     textColor: primary,
@@ -95,29 +83,27 @@ export const forms: ThemeProps = {
       withIcon: sizes.sizeL,
     },
   },
-  selectors: {
-    checkbox: {
-      backgroundColor: background,
-      disabledBackgroundColor: primaryAccent,
-      checkmarkColor: background,
-      hoverColor: primaryAccent,
-      labelColor: primary,
-      disabledLabelColor: primaryAccent,
-      borderRadius: sizes.sizeXs,
-      borderColor: primaryAccent,
-      disabledBorderColor: primaryAccent,
-    },
-    radio: {
-      backgroundColor: background,
-      disabledBackgroundColor: primaryAccent,
-      checkmarkColor: background,
-      hoverColor: primaryAccent,
-      labelColor: primary,
-      disabledLabelColor: primaryAccent,
-      borderRadius: sizes.sizeXl,
-      borderColor: primaryAccent,
-      disabledBorderColor: primaryAccent,
-    },
+  checkbox: {
+    backgroundColor: background,
+    disabledBackgroundColor: primaryAccent,
+    checkmarkColor: background,
+    hoverColor: primaryAccent,
+    labelColor: primary,
+    disabledLabelColor: primaryAccent,
+    borderRadius: sizes.sizeXs,
+    borderColor: primaryAccent,
+    disabledBorderColor: primaryAccent,
+  },
+  radio: {
+    backgroundColor: background,
+    disabledBackgroundColor: primaryAccent,
+    checkmarkColor: background,
+    hoverColor: primaryAccent,
+    labelColor: primary,
+    disabledLabelColor: primaryAccent,
+    borderRadius: sizes.sizeXl,
+    borderColor: primaryAccent,
+    disabledBorderColor: primaryAccent,
   },
   dropdown: {
     content: {
@@ -151,61 +137,55 @@ export const forms: ThemeProps = {
 };
 
 export const light: ThemeProps = {
-  metrics: {
-    sizes,
-    width,
+  sizes,
+  colors: {
+    primary: '#161717',
+    secondary: '#fcfcfc',
+    background: 'rgb(255, 254, 254)',
+    primaryAccent: 'rgb(240, 240, 240)',
+    secondaryAccent: 'rgb(245, 245, 245)',
   },
-  text: {
-    primaryColor: primary,
-    secondaryColor: secondary,
-    disabledColor: 'grey',
-    fontSizeXs: '0.75rem',
-    fontSizeS: '0.95rem',
-    fontSizeM: '1.15rem',
-    fontSizeL: '1.45rem',
-    fontSizeXl: '2rem',
-    fontWeightLight: '200',
-    fontWeightMedium: '400',
-    fontWeightBold: '700',
-  },
-  button,
-  icon,
-  modal,
-  system: {
-    colors: {
-      primary: '#161717',
-      secondary: '#fcfcfc',
-      background: 'rgb(255, 254, 254)',
-      primaryAccent: 'rgb(240, 240, 240)',
-      secondaryAccent: 'rgb(245, 245, 245)',
+  core: {
+    text: {
+      primaryColor: primary,
+      secondaryColor: secondary,
+      disabledColor: 'grey',
+      fontSizeXs: '0.75rem',
+      fontSizeS: '0.95rem',
+      fontSizeM: '1.15rem',
+      fontSizeL: '1.45rem',
+      fontSizeXl: '2rem',
+      fontWeightLight: '200',
+      fontWeightMedium: '400',
+      fontWeightBold: '700',
     },
+    button,
+    icon,
   },
-  ...forms,
+  forms,
 };
 
 export const dark: ThemeProps = {
-  metrics: {
-    sizes,
-    width,
+  sizes,
+  colors,
+  core: {
+    text: {
+      primaryColor: primary,
+      secondaryColor: secondary,
+      disabledColor: 'grey',
+      fontSizeXs: '0.75rem',
+      fontSizeS: '0.95rem',
+      fontSizeM: '1.15rem',
+      fontSizeL: '1.45rem',
+      fontSizeXl: '2rem',
+      fontWeightLight: '200',
+      fontWeightMedium: '400',
+      fontWeightBold: '700',
+    },
+    button,
+    icon,
   },
-  text: {
-    primaryColor: primary,
-    secondaryColor: secondary,
-    disabledColor: 'grey',
-    fontSizeXs: '0.75rem',
-    fontSizeS: '0.95rem',
-    fontSizeM: '1.15rem',
-    fontSizeL: '1.45rem',
-    fontSizeXl: '2rem',
-    fontWeightLight: '200',
-    fontWeightMedium: '400',
-    fontWeightBold: '700',
-  },
-  button,
-  icon,
-  modal,
-  system,
-  ...forms,
+  forms,
 };
 
 export const SetTheme = (name: 'light' | 'dark') => {

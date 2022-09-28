@@ -6,7 +6,7 @@
   cursor: pointer;
 
   & > .label.margin {
-    margin-left: var(--metrics-size-xs);
+    margin-left: var(--system-size-xs);
   }
   &.primary {
     background-color: var(--button-primary-bg-color);
