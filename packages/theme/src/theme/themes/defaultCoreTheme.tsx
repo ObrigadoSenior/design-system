@@ -24,7 +24,7 @@ export const defaultCoreTheme = ({ colors, sizes }: Required<ThemeDefaultProps>)
         bgColor: primary,
         borderColor: primary,
         borderRadius: xl,
-        padding: s,
+        padding: xs,
         textColor: bg,
       },
     },

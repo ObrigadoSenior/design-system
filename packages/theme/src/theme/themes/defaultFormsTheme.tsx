@@ -2,7 +2,7 @@ import { ThemeDefaultProps, ThemeFormsProps } from '../../types';
 
 export const defaultFormsTheme = ({ colors, sizes }: Required<ThemeDefaultProps>): ThemeFormsProps => {
   const { bg, primary, secondary, accent, disabled } = colors;
-  const { xs, s, m, l } = sizes;
+  const { xs, s, m, l, xl } = sizes;
   return {
     input: {
       bgColor: bg,
@@ -34,9 +34,9 @@ export const defaultFormsTheme = ({ colors, sizes }: Required<ThemeDefaultProps>
         active: {
           bgColor: accent,
           borderColor: accent,
-          textColor: secondary,
+          textColor: primary,
           iconColor: secondary,
-          height: l,
+          height: xl,
         },
         disabled: {
           bgColor: disabled,

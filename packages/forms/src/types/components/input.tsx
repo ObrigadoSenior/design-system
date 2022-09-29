@@ -1,4 +1,4 @@
-import { IconProps } from '@obrigadosenior/core';
+import { ButtonProps, IconProps } from '@obrigadosenior/core';
 import { size } from '../../../../../utils';
 
 export type InputProps = {
@@ -9,7 +9,7 @@ export type InputProps = {
   padding?: string;
   icons?: {
     start?: IconProps;
-    end?: IconProps;
+    end?: ButtonProps;
   };
   className?: string;
   defaultValue?: string;

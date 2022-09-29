@@ -1,4 +1,4 @@
-import { Icon } from '@obrigadosenior/core';
+import { Button, Icon } from '@obrigadosenior/core';
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
 
@@ -40,7 +40,7 @@ export const Input = ({
         }}
         {...rest}
       />
-      {icons?.end && <Icon className={cx(styles.icon, styles.end)} disabled={rest.disabled} size="m" {...icons.end} />}
+      {icons?.end && <Button className={cx(styles.icon, styles.end)} disabled={rest.disabled} {...icons.end} />}
     </div>
   );
 };

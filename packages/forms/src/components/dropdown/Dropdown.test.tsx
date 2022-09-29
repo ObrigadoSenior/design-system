@@ -22,16 +22,12 @@ const options: DropdownOptionProps[] = [
   },
 ];
 
-type DefaultProps = Pick<
-  TestComponentProps,
-  'title' | 'placeholder' | 'onChange' | 'options' | 'onOptionClick' | 'onToggleOpen'
->;
+type DefaultProps = Pick<TestComponentProps, 'title' | 'placeholder' | 'onChange' | 'options' | 'onOptionClick'>;
 const defaultProps: DefaultProps = {
   title: 'Title',
   placeholder: 'Placeholder',
   onChange: () => {},
   onOptionClick: () => {},
-  onToggleOpen: () => {},
   options,
 };
 

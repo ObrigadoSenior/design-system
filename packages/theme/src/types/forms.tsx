@@ -49,8 +49,6 @@ export type ThemeInputProps = {
   disabledBgColor: string;
   disabledBorderColor: string;
   disabledTextColor: string;
-  paddingWithIcon: string;
-  paddingWithoutIcon: string;
 };
 
 export type ThemeRadioProps = {

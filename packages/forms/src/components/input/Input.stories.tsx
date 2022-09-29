@@ -25,7 +25,11 @@ Input.args = {
       icon: svgIcon,
     },
     end: {
-      icon: svgIcon,
+      buttonType: 'icon',
+      icon: {
+        icon: svgIcon,
+      },
+      onClick: () => console.log('Clicked'),
     },
   },
 };

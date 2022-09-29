@@ -12,11 +12,12 @@ export const Dropdown = ({
   onChange,
   options = [],
   onOptionClick,
-  onToggleOpen,
+  icons,
+  open: propOpen = false,
   ...rest
 }: DropdownProps): JSX.Element => {
   const { activeOption, filteredOptions, onSetFilteredOptions, onClickFilterOptions } = useFilterOptions({ options });
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(propOpen);
   const { title } = activeOption || {};
 
   const renderOptions = filteredOptions.map(({ ...rest }) => (
@@ -34,7 +35,7 @@ export const Dropdown = ({
     </li>
   ));
 
-  useEffect(() => onToggleOpen && onToggleOpen(open), [open]);
+  useEffect(() => setOpen(propOpen), [propOpen]);
 
   return (
     <div
@@ -54,6 +55,7 @@ export const Dropdown = ({
           onChange && onChange(event);
           setOpen(true);
         }}
+        icons={icons}
         {...rest}
       />
       <div data-testid="dropdown-content" className={cx(styles.dropdown_content, open ? styles.open : styles.close)}>

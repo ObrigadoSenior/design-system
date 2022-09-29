@@ -8,12 +8,14 @@
   border-radius: var(--input-border-radius);
   width: 100%;
   box-sizing: border-box;
+
   & > .icon {
-    &.start {
-      margin-left: var(--system-size-s);
-    }
+    &.start,
     &.end {
-      margin-right: var(--system-size-s);
+      margin: 0 var(--system-size-s);
+    }
+    > svg > path {
+      fill: var(--input-text-color);
     }
   }
   &.disabled {
@@ -26,41 +28,29 @@
       fill: var(--input-disabled-text-color);
     }
   }
-  &:focus-within {
-    & > .input {
-      outline: none;
-    }
-    &:after {
-      content: ' ';
-      position: absolute;
-      width: 95%;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-      height: var(--system-size-s);
-      z-index: -1;
-      box-shadow: 0px 3px 3px var(--system-color-accent);
-    }
-  }
 }
 
 .input {
+  position: relative;
   color: var(--input-text-color);
   background-color: transparent;
   height: 100%;
   width: 100%;
   border: none;
-  border-radius: var(--input-border-radius);
   font-size: 16px;
-  padding: var(--system-size-s) var(--system-size-m);
+  padding: var(--system-size-s);
   box-sizing: border-box;
   cursor: text;
+  border-left: 3px solid transparent;
 
   &::placeholder {
     color: var(--input-placeholder-color);
   }
   &:disabled {
     cursor: default;
+  }
+  &:focus {
+    outline: none;
+    border-left: 3px solid var(--input-text-color);
   }
 }
