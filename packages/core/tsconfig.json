@@ -1,4 +1,4 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "dist", "example", "rollup.config.js", "packages"]
+  "exclude": ["node_modules", "dist", "example", "rollup.config.js", "packages", "./__mocks__/*.js"]
 }

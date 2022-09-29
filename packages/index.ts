@@ -1,4 +1,4 @@
 export * from './core';
 export * from './forms';
-export * from './system';
+export * from './terminal';
 export * from './theme';

@@ -26,7 +26,7 @@ export const Input = ({
   return (
     <div
       data-testid="input-wrapper"
-      style={{ height: `var(--metrics-size${height})` }}
+      style={{ height: `var(--system-size${height})` }}
       className={cx(styles.container, className, rest.disabled ? styles.disabled : null)}
     >
       {/* {leftIcon && <Icon className="icon-left" icon={leftIcon} size="m" disabled={rest.disabled} />} */}

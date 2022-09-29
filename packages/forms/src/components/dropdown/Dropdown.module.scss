@@ -78,12 +78,12 @@
   align-items: center;
   justify-items: center;
   width: 100%;
-  height: var(--dropdown-content-item-height);
+  height: var(--dropdown-content-item-neutral-height);
   border: none;
-  border-radius: var(--dropdown-content-item-border-radius);
-  border: 1px solid var(--dropdown-content-item-border-color);
-  background-color: var(--dropdown-content-item-bg-color);
-  color: var(--dropdown-content-item-text-color);
+  border-radius: var(--dropdown-content-item-neutral-border-radius);
+  border: 1px solid var(--dropdown-content-item-neutral-border-color);
+  background-color: var(--dropdown-content-item-neutral-bg-color);
+  color: var(--dropdown-content-item-neutral-text-color);
   margin-bottom: 2.5px;
   cursor: pointer;
   &.active {

@@ -1,11 +1,11 @@
-$space: var(--metrics-size-xs);
+$space: var(--system-size-xs);
 
 .top_panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 $space;
-  height: var(--metrics-size-m);
+  height: var(--system-size-m);
   background-color: var(--system-primary-accent-color);
   > .left_component {
     display: flex;
@@ -22,8 +22,8 @@ $space: var(--metrics-size-xs);
       display: flex;
       align-items: center;
       justify-content: center;
-      width: var(--metrics-size-s);
-      height: var(--metrics-size-s);
+      width: var(--system-size-s);
+      height: var(--system-size-s);
       border-radius: 50%;
       margin-left: calc($space * 2);
       &:after {

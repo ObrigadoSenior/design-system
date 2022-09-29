@@ -1,5 +1,5 @@
-$margin-size: var(--metrics-size-s);
-$space: var(--metrics-size-xs);
+$margin-size: var(--system-size-s);
+$space: var(--system-size-xs);
 
 .path {
   background-color: var(--system-secondary-accent-color);
@@ -30,7 +30,7 @@ $space: var(--metrics-size-xs);
   border: none;
   color: var(--system-primary-color);
   margin: 0;
-  padding: 0 0 0 var(--metrics-size-xs);
+  padding: 0 0 0 var(--system-size-xs);
   &:focus {
     outline: none;
   }
@@ -39,7 +39,7 @@ $space: var(--metrics-size-xs);
 .date {
   color: var(--system-secondary-accent-color) !important;
   position: absolute;
-  right: var(--metrics-size-s);
+  right: var(--system-size-s);
   opacity: 1;
   transition: all 1s;
   &.hide {
@@ -47,7 +47,7 @@ $space: var(--metrics-size-xs);
   }
 }
 .command {
-  margin-left: var(--metrics-size-xs);
+  margin-left: var(--system-size-xs);
 }
 
 @keyframes rainbow-bg {
