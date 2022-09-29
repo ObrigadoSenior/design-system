@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from '.';
+import { Button as Btn } from '.';
 
 const icon = (
   <svg viewBox="0 0 20 20">
@@ -10,39 +10,15 @@ const icon = (
 );
 
 export default {
-  title: 'Core/Button',
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: 'Core',
+  component: Btn,
+} as ComponentMeta<typeof Btn>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Btn> = (args) => <Btn {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Button = Template.bind({});
+Button.args = {
   buttonType: 'primary',
   label: 'Default Button',
   icon: { icon },
-};
-
-export const Primary = Template.bind({});
-Primary.args = {
-  buttonType: 'primary',
-  label: 'Primary button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  buttonType: 'secondary',
-  label: 'Secondary button',
-};
-
-export const Flat = Template.bind({});
-Flat.args = {
-  buttonType: 'flat',
-  label: 'Secondary button',
-};
-
-export const Icon = Template.bind({});
-Icon.args = {
-  buttonType: 'icon',
-  icon: { icon: <>🤡</> },
 };

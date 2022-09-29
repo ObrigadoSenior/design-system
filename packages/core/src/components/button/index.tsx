@@ -22,8 +22,8 @@ export const Button = ({
       {...rest}
     >
       {icon ? <Icon className={cx(styles.icon)} size={labelSize} {...icon} /> : null}
-      {label ? (
-        <Text tag="span" className={cx(styles.label, icon ? styles.margin : null)} size={labelSize}>
+      {label && buttonType !== 'icon' ? (
+        <Text tag="span" className={styles.label} size={labelSize}>
           {label}
         </Text>
       ) : null}

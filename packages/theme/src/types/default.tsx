@@ -2,8 +2,8 @@ export type ThemeColorsProps = {
   bg: string;
   primary: string;
   secondary: string;
-  primaryAccent: string;
-  secondaryAccent: string;
+  accent: string;
+  disabled: string;
 };
 
 export type ThemeSizeProps = {

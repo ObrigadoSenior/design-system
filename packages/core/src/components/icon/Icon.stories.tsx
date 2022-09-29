@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Icon } from '.';
+import { Icon as Icn } from '.';
 
 const svgIcon = (
   <svg viewBox="0 0 20 20">
@@ -10,20 +10,13 @@ const svgIcon = (
 );
 
 export default {
-  title: 'Core/Icon',
-  component: Icon,
-} as ComponentMeta<typeof Icon>;
+  title: 'Core',
+  component: Icn,
+} as ComponentMeta<typeof Icn>;
 
-const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
+const Template: ComponentStory<typeof Icn> = (args) => <Icn {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  icon: <>{svgIcon}</>,
-};
-
-export const Primary = Template.bind({});
-Primary.args = {
-  type: 'secondary',
-  size: 's',
+export const Icon = Template.bind({});
+Icon.args = {
   icon: <>{svgIcon}</>,
 };

@@ -77,8 +77,8 @@ const theme: ThemeProps = {
     bg: 'red',
     primary: 'green',
     secondary: 'yellow',
-    primaryAccent: 'purple',
-    secondaryAccent: 'blue',
+    accent: 'purple',
+    disabled: 'blue',
   },
   sizes: {
     none: '0',
