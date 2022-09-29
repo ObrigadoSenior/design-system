@@ -21,7 +21,7 @@ interface BtnIconProps {
 
 type ConditionalProps =
   | (BtnLabelProps & {
-      buttonType?: 'primary' | 'secondary' | 'badge' | 'flat';
+      buttonType?: 'primary' | 'secondary';
     })
   | (BtnIconProps & {
       buttonType?: 'icon';

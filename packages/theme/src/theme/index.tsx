@@ -29,3 +29,6 @@ export const AddTheme = ({ theme }: AddThemeProps): void => {
     rest && setDefaultTheme({ data: rest });
   }
 };
+
+export * from './palettes';
+export * from './themes';
