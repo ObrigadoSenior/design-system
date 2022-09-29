@@ -1,27 +1,27 @@
 .icon {
   display: inline-flex;
   &.primary > svg {
-    fill: var(--icon-color-primary);
-    color: var(--icon-color-primary);
+    fill: var(--icon-primary-color);
+    color: var(--icon-primary-color);
     & > path {
-      fill: var(--icon-color-primary);
-      color: var(--icon-color-primary);
+      fill: var(--icon-primary-color);
+      color: var(--icon-primary-color);
     }
   }
   &.secondary > svg {
-    fill: var(--icon-color-secondary);
-    color: var(--icon-color-secondary);
+    fill: var(--icon-secondary-color);
+    color: var(--icon-secondary-color);
     & > path {
-      fill: var(--icon-color-secondary);
-      color: var(--icon-color-secondary);
+      fill: var(--icon-secondary-color);
+      color: var(--icon-secondary-color);
     }
   }
   &.disabled > svg {
-    fill: var(--icon-color-disabled);
-    color: var(--icon-color-disabled);
+    fill: var(--icon-disabled-color);
+    color: var(--icon-disabled-color);
     & > path {
-      fill: var(--icon-color-disabled);
-      color: var(--icon-color-disabled);
+      fill: var(--icon-disabled-color);
+      color: var(--icon-disabled-color);
     }
   }
   &.xs {

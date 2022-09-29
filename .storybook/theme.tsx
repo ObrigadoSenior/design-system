@@ -2,11 +2,11 @@ import { AddTheme, darkPalette, defaultTheme, lightPalette, ThemeSizeProps } fro
 
 const sizes: ThemeSizeProps = {
   none: `0`,
-  xs: `0.25em`,
-  s: `0.75em`,
-  m: `1.5em`,
-  l: `2.5em`,
-  xl: `4.5em`,
+  xs: `0.5rem`,
+  s: `0.75rem`,
+  m: `1.25rem`,
+  l: `2rem`,
+  xl: `3rem`,
 };
 
 export const SetTheme = (name: 'light' | 'dark') => {

@@ -1,11 +1,11 @@
 .meter {
   position: relative;
-  height: var(--system-size-xs);
+  height: var(--terminal-progress-bar-height);
   background: transparent;
   overflow: hidden;
   width: 100%;
   > .progress {
-    background-color: var(--system-secondary-accent-color);
+    background-color: var(--terminal-progress-bar-bg-color);
     animation: progressBar 3s ease-in-out;
     animation-fill-mode: both;
     height: 100%;

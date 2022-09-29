@@ -1,7 +1,7 @@
 .text {
-  font-size: var(--text-size-s);
-  font-weight: var(--text-weight-medium);
-  color: var(--system-primary-color);
+  font-size: var(--terminal-text-block-font-size);
+  font-weight: var(--terminal-text-block-font-weight);
+  color: var(--terminal-text-block-color);
 }
 
 .list {

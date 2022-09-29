@@ -2,16 +2,17 @@ $margin-size: var(--system-size-s);
 $space: var(--system-size-xs);
 
 .path {
-  background-color: var(--system-secondary-accent-color);
+  background-color: var(--terminal-input-path-bg-color);
   &:before {
-    background-color: var(--system-primary-color);
-    color: var(--system-secondary-color);
+    background-color: var(--system-color-primary);
+    color: var(--system-color-accent);
     padding: 0 $space;
     margin-right: $space;
     content: '\2126';
   }
   & > .branch {
-    background-color: rgb(0, 172, 60);
+    background-color: var(--terminal-input-branch-bg-color);
+    color: var(--system-color-primary);
     padding: 0 $space;
     margin-left: $space;
     &.rainbow {
@@ -22,13 +23,12 @@ $space: var(--system-size-xs);
 }
 
 .input {
-  font-size: var(--text-size-s);
-  font-weight: var(--text-weight-medium);
-  color: var(--system-primary-color);
+  font-size: var(--terminal-input-font-size);
+  font-weight: var(--terminal-input-font-weight);
+  color: var(--terminal-input-color);
   width: 100%;
   background-color: transparent;
   border: none;
-  color: var(--system-primary-color);
   margin: 0;
   padding: 0 0 0 var(--system-size-xs);
   &:focus {
@@ -37,7 +37,7 @@ $space: var(--system-size-xs);
 }
 
 .date {
-  color: var(--system-secondary-accent-color) !important;
+  color: var(--terminal-input-date-color) !important;
   position: absolute;
   right: var(--system-size-s);
   opacity: 1;

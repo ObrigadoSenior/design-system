@@ -29,9 +29,6 @@
     "rollup": "^2.33.1",
     "typescript": "^4.0.2"
   },
-  "dependencies": {
-    "@obrigadosenior/theme": "0.0.6"
-  },
   "peerDependencies": {
     "react": ">=16.8.6",
     "react-dom": ">=16.8.6"

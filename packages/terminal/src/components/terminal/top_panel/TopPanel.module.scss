@@ -5,8 +5,8 @@ $space: var(--system-size-xs);
   align-items: center;
   justify-content: space-between;
   padding: 0 $space;
-  height: var(--system-size-m);
-  background-color: var(--system-primary-accent-color);
+  height: var(--terminal-top-height);
+  background-color: var(--terminal-top-bg-color);
   > .left_component {
     display: flex;
     list-style: none;
@@ -55,12 +55,12 @@ $space: var(--system-size-xs);
   }
   .header {
     font-size: var(--text-size-s);
-    color: var(--text-color-primary);
+    color: var(--terminal-text-color);
   }
   .command_tool {
     margin-right: $space;
     &:after {
-      color: var(--system-secondary-accent-color);
+      color: var(--terminal-text-color);
       font-size: var(--text-size-xs);
       content: '\2325 \2318 \0031';
     }

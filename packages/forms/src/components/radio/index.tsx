@@ -7,7 +7,7 @@ import styles from './Radio.module.scss';
 
 export const Radio = ({ className = '', label, onChange, ...rest }: RadioProps): JSX.Element => {
   return (
-    <label data-testid="radio" className={cx(styles.radio_label, className)}>
+    <label data-testid="radio" className={cx(styles.container, className)}>
       <input
         data-testid="input"
         className={styles.radio_input}

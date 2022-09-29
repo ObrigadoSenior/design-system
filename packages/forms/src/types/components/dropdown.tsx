@@ -13,7 +13,7 @@ export type DropdownOptionProps = {
 export type DropdownProps = InputProps & {
   options: DropdownOptionProps[];
   onOptionClick: (option: DropdownOptionProps) => void;
-  onToggleOpen?: (open: boolean) => void;
+  open?: boolean;
 };
 
 export type DropdownOptionsProps = {

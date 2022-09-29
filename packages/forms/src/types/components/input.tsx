@@ -1,4 +1,4 @@
-import { IconProps } from '@obrigadosenior/core';
+import { ButtonProps, IconProps } from '@obrigadosenior/core';
 import { size } from '../../../../../utils';
 
 export type InputProps = {
@@ -7,8 +7,10 @@ export type InputProps = {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick?: () => void;
   padding?: string;
-  icon?: IconProps;
-  height?: size;
+  icons?: {
+    start?: IconProps;
+    end?: ButtonProps;
+  };
   className?: string;
   defaultValue?: string;
   disabled?: boolean;

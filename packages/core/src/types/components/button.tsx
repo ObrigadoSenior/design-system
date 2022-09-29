@@ -21,10 +21,10 @@ interface BtnIconProps {
 
 type ConditionalProps =
   | (BtnLabelProps & {
-      buttonType?: 'primary' | 'secondary';
+      buttonType: 'primary' | 'secondary';
     })
   | (BtnIconProps & {
-      buttonType?: 'icon';
+      buttonType: 'icon';
     });
 
 export type ButtonProps = DefaultButtonProps & ConditionalProps;
