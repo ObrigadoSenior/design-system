@@ -7,8 +7,10 @@ export type InputProps = {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick?: () => void;
   padding?: string;
-  icon?: IconProps;
-  height?: size;
+  icons?: {
+    start?: IconProps;
+    end?: IconProps;
+  };
   className?: string;
   defaultValue?: string;
   disabled?: boolean;

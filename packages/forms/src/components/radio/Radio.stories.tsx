@@ -11,4 +11,6 @@ export default {
 const Template: ComponentStory<typeof Rdo> = (args) => <Rdo {...args} />;
 
 export const Radio = Template.bind({});
-Radio.args = {};
+Radio.args = {
+  label: 'Radio',
+};

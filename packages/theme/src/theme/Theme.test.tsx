@@ -14,8 +14,6 @@ export const forms: ThemeFormsProps = {
     disabledTitleColor: 'gray',
     titleColor: 'black',
     placeholderColor: 'gray',
-    paddingWithoutIcon: '10px',
-    paddingWithIcon: '20px',
   },
   checkbox: {
     bgColor: 'blue',

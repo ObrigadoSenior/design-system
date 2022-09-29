@@ -2,21 +2,19 @@ import { ThemeDefaultProps, ThemeFormsProps } from '../../types';
 
 export const defaultFormsTheme = ({ colors, sizes }: Required<ThemeDefaultProps>): ThemeFormsProps => {
   const { bg, primary, secondary, accent, disabled } = colors;
-  const { s, m, l } = sizes;
+  const { xs, s, m, l } = sizes;
   return {
     input: {
       bgColor: bg,
       textColor: primary,
       borderColor: accent,
-      borderRadius: s,
+      borderRadius: xs,
       disabledBgColor: disabled,
       disabledTextColor: secondary,
       disabledBorderColor: disabled,
       disabledTitleColor: disabled,
       titleColor: primary,
-      placeholderColor: primary,
-      paddingWithoutIcon: s,
-      paddingWithIcon: m,
+      placeholderColor: disabled,
     },
     dropdown: {
       content: {
@@ -56,7 +54,7 @@ export const defaultFormsTheme = ({ colors, sizes }: Required<ThemeDefaultProps>
       hoverColor: primary,
       labelColor: primary,
       disabledLabelColor: disabled,
-      borderRadius: s,
+      borderRadius: xs,
       borderColor: accent,
       disabledBorderColor: disabled,
     },

@@ -7,7 +7,7 @@ import styles from './Checkbox.module.scss';
 
 export const Checkbox = ({ className = '', label, onChange, ...rest }: CheckboxProps): JSX.Element => {
   return (
-    <label data-testid="checkbox" className={cx(styles.checkbox_label, className)}>
+    <label data-testid="checkbox" className={cx(styles.container, className)}>
       <input
         data-testid="input"
         className={styles.checkbox_input}
