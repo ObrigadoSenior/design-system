@@ -10,7 +10,7 @@ export const defaultTerminalTheme = ({ colors, sizes }: Required<ThemeDefaultPro
       borderColor: accent,
       minHeight: '40vh',
       minWidth: '60vw',
-      textColor: 'primary',
+      textColor: primary,
     },
     top: {
       bgColor: accent,
@@ -23,7 +23,7 @@ export const defaultTerminalTheme = ({ colors, sizes }: Required<ThemeDefaultPro
     input: {
       branchBgColor: secondary,
       color: primary,
-      pathBgColor: bg,
+      pathBgColor: accent,
       dateColor: disabled,
       fontSize: '0.75rem',
       fontWeight: '400',

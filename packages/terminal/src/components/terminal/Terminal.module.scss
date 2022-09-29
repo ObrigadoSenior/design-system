@@ -2,10 +2,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 60vw;
-  height: 50vh;
-  background-color: var(--system-background-color);
+  min-width: var(--terminal-min-width);
+  min-height: var(--terminal-min-height);
+  background-color: var(--terminal-bg-color);
   border-radius: var(--system-size-s);
-  border: 1px solid var(--system-primary-accent-color);
+  border: 1px solid var(--terminal-border-color);
   overflow: auto;
 }
