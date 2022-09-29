@@ -1,5 +1,5 @@
 export type ThemeButtonProps = {
-  backgroundColor: string;
+  bgColor: string;
   borderColor: string;
   textColor: string;
   borderRadius: string;

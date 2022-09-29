@@ -1,5 +1,5 @@
 export type ThemeColorsProps = {
-  background: string;
+  bg: string;
   primary: string;
   secondary: string;
   primaryAccent: string;

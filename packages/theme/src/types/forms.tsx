@@ -1,6 +1,6 @@
 export type ThemeCheckboxProps = {
-  backgroundColor: string;
-  disabledBackgroundColor: string;
+  bgColor: string;
+  disabledBgColor: string;
   checkmarkColor: string;
   hoverColor: string;
   labelColor: string;
@@ -15,50 +15,47 @@ export type ThemeDropdownContentProps = {
   borderRadius: string;
   height: string;
   transitionSpeed: string;
-  backgroundColor: string;
+  bgColor: string;
 };
 
 type ThemeDropdownItemProps = {
-  backgroundColor: string;
+  bgColor: string;
   borderColor: string;
   textColor: string;
   iconColor: string;
+  height: string;
 };
 
 export type ThemeDropdownContentItemProps = {
-  height: string;
   neutral: ThemeDropdownItemProps;
   active: ThemeDropdownItemProps;
   disabled: ThemeDropdownItemProps;
 };
 
 export type ThemeDropdownProps = {
-  content: ThemeDropdownContentProps & {
-    item: ThemeDropdownContentItemProps;
-  };
+  content: ThemeDropdownContentProps;
+  items: ThemeDropdownContentItemProps;
 };
 // <-- DROPDOWN
 
 export type ThemeInputProps = {
-  backgroundColor: string;
+  bgColor: string;
   borderColor: string;
   textColor: string;
   borderRadius: string;
   titleColor: string;
   placeholderColor: string;
   disabledTitleColor: string;
-  disabledBackgroundColor: string;
+  disabledBgColor: string;
   disabledBorderColor: string;
   disabledTextColor: string;
-  padding: {
-    withIcon: string;
-    noIcon: string;
-  };
+  paddingWithIcon: string;
+  paddingWithoutIcon: string;
 };
 
 export type ThemeRadioProps = {
-  backgroundColor: string;
-  disabledBackgroundColor: string;
+  bgColor: string;
+  disabledBgColor: string;
   checkmarkColor: string;
   hoverColor: string;
   labelColor: string;
