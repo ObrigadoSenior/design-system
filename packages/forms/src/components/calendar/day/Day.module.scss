@@ -1,0 +1,71 @@
+.day {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid red;
+  font-weight: 400;
+  height: 48px;
+  &.otherMonth {
+    opacity: 0.5;
+    & + label {
+      color: 'silver';
+    }
+  }
+  &.searchedStart {
+    background-color: green;
+    color: white;
+    border-color: red;
+    &:not(.searchedEnd) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  &.searchedEnd {
+    background-color: red;
+    color: white;
+    border-color: red;
+    &:not(.searchedStart) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  &.range {
+    background-color: pink;
+    margin: 0, -5px;
+    border-radius: 0;
+    color: blue;
+    border-color: pink;
+  }
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.25;
+    & + label {
+      cursor: default;
+      color: silver;
+    }
+  }
+  & > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  & > input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    appearance: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+  }
+}
