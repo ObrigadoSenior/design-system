@@ -26,7 +26,6 @@ export type ThemeCalendarDayDisabledProps = ThemeCalendarDayDefaultProps;
 export type ThemeCalendarDayProps = {
   default: ThemeCalendarDayDefaultProps & {
     borderRadius: string;
-    border: string;
     height: string;
   };
   otherMonth: ThemeCalendarOtherMonthProps;

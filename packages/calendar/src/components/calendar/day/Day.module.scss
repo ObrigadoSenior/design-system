@@ -5,13 +5,15 @@
   align-items: center;
   background-color: var(--calendar-day-default-bg-color);
   border-radius: var(--calendar-day-default-border-radius);
-  border: var(--calendar-day-default-border);
+  border: 1px solid var(--calendar-day-default-border-color);
   font-weight: 400;
   height: var(--calendar-day-default-height);
+
   & + label {
     color: var(--calendar-day-default-color);
   }
   &.otherMonth {
+    opacity: 0.5;
     background-color: var(--calendar-day-other-month-bg-color);
     border-color: var(--calendar-day-other-month-border-color);
     & + label {
@@ -22,6 +24,7 @@
     background-color: var(--calendar-day-searched-start-bg-color);
     color: var(--calendar-day-searched-start-color);
     border-color: var(--calendar-day-searched-start-border-color);
+    margin-right: -1px;
     &:not(.searchedEnd) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -31,6 +34,7 @@
     background-color: var(--calendar-day-searched-end-bg-color);
     color: var(--calendar-day-searched-end-color);
     border-color: var(--calendar-day-searched-end-border-color);
+    margin-left: -1px;
     &:not(.searchedStart) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -40,7 +44,7 @@
     background-color: var(--calendar-day-range-bg-color);
     color: var(--calendar-day-range-color);
     border-color: var(--calendar-day-range-border-color);
-    margin: 0, -5px;
+    margin: 0 -1px;
     border-radius: 0;
   }
   &.disabled {
@@ -48,9 +52,17 @@
     pointer-events: none;
     background-color: var(--calendar-day-disabled-bg-color);
     border-color: var(--calendar-day-disabled-border-color);
+    opacity: 0.25;
     & + label {
       cursor: default;
       color: var(--calendar-day-disabled-color);
+    }
+    &:after {
+      content: '\2215';
+      font-size: 150%;
+      position: absolute;
+      color: white;
+      opacity: 0.4;
     }
   }
   & > label {
