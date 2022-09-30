@@ -3,11 +3,12 @@ import React from 'react';
 import { CalendarWeekdaysProps } from '../../../types/components/calendar';
 import styles from '../Calendar.module.scss';
 import { dateAdd } from '../utils/dates';
+import { mapDates } from '../utils/mapDates';
 
-const weekdays = (sunday: CalendarWeekdaysProps['sunday']) =>
-  new Array(7).fill(sunday).map((day, idx) => {
-    const weekday = dateAdd(day, idx, 'd').format('ddd');
-    const weekDayTestId = `weekday${idx}`;
+export const Weekdays = ({ month }: CalendarWeekdaysProps): JSX.Element => {
+  const weekdays = mapDates({ amount: 7, month }).map(({ d, i }) => {
+    const weekday = dateAdd(d, i, 'd').format('ddd');
+    const weekDayTestId = `weekday${i}`;
     return (
       <li data-testid={weekDayTestId} key={weekday} className={styles.weekday}>
         <Text>{weekday}</Text>
@@ -15,6 +16,5 @@ const weekdays = (sunday: CalendarWeekdaysProps['sunday']) =>
     );
   });
 
-export const Weekdays = ({ sunday }: CalendarWeekdaysProps): JSX.Element => {
-  return <>{weekdays(sunday)}</>;
+  return <>{weekdays}</>;
 };

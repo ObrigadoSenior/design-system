@@ -2,7 +2,7 @@ import { Text } from '@obrigadosenior/core';
 import cn from 'classnames';
 import React from 'react';
 import { CalendarDayProps } from '../../../types/components/calendar';
-import { dateFormat, dateIsSame } from '../utils/dates';
+import { dateFormat } from '../utils/dates';
 import styles from './Day.module.scss';
 
 export const Day = ({
@@ -14,7 +14,7 @@ export const Day = ({
   range,
   disabled,
   otherMonth,
-  firstNonDisabledDay,
+  today,
 }: CalendarDayProps): JSX.Element => {
   const formattedDay = dateFormat(day, 'YY-MM-DD');
 
@@ -37,7 +37,7 @@ export const Day = ({
         checked={searchedStart || searchedEnd}
         disabled={disabled}
         name={formattedDay}
-        tabIndex={dateIsSame(day, firstNonDisabledDay, 'day') ? 0 : -1}
+        tabIndex={today ? 0 : -1}
       />
       <label htmlFor={formattedDay}>
         <Text>{day.format('D')}</Text>

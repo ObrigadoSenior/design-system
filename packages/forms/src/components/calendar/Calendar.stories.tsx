@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 
-import { Calendar as Cal } from '.';
 import dayjs from 'dayjs';
-import { CalendarProps } from '../../types';
+import { Calendar as Cal } from '.';
+import { useCalendarDates } from './hooks/useCalendarDates';
 
 export default {
   title: 'Forms/Calendar',
@@ -11,31 +11,9 @@ export default {
 } as ComponentMeta<typeof Cal>;
 
 const Template: ComponentStory<typeof Cal> = (args) => {
-  const [dates, setDates] = useState<CalendarProps['dates']>({
-    month: dayjs(),
-  });
+  const props = useCalendarDates({ dates: { month: dayjs() } });
 
-  return (
-    <Cal
-      {...args}
-      onClickCalendarDay={(d) => {
-        if (dates.start && dates.end) {
-          setDates({ ...dates, start: d, end: undefined });
-        } else if (
-          dates.start === undefined ||
-          (d.isBefore(dates.end) && d.isBefore(dates.start)) ||
-          d.isSame(dates.end)
-        ) {
-          setDates({ ...dates, start: d });
-        } else {
-          setDates({ ...dates, end: d });
-        }
-      }}
-      onClickNextCalendarButton={(d) => setDates({ ...dates, month: d })}
-      onClickPrevCalendarButton={(d) => setDates({ ...dates, month: d })}
-      dates={dates}
-    />
-  );
+  return <Cal {...args} {...props} />;
 };
 
 export const Calendar = Template.bind({});

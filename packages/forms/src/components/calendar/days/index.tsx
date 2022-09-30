@@ -1,52 +1,46 @@
-import dayjs, { Dayjs } from 'dayjs';
-import isBetween from 'dayjs/plugin/isBetween';
+import dayjs from 'dayjs';
 
 import React from 'react';
 
 import { CalendarDaysProps } from '../../../types/components/calendar';
 import { Day } from '../day';
-import { dateAdd, dateIsBefore, dateIsBetween, dateIsSame } from '../utils/dates';
+import {
+  dateAdd,
+  dateIsBefore,
+  dateIsBetween,
+  dateIsSame,
+  daysFromSunday,
+  daysInMonth,
+  daysInNextMonthFirstWeek,
+} from '../utils/dates';
+import { mapDates } from '../utils/mapDates';
 
-dayjs.extend(isBetween);
-
-export const Days = ({ onClickCalendarDay, startOfMonth, sunday, dates }: CalendarDaysProps): JSX.Element => {
+export const Days = ({ onClickCalendarDay, dates }: CalendarDaysProps): JSX.Element => {
   const { start, end, month } = dates;
-  const endOfMonth = dayjs(month).endOf('month');
-  const daysFromSunday = startOfMonth.diff(sunday, 'day');
-  const daysInNextMonthFirstWeek = Math.abs(endOfMonth.diff(endOfMonth.weekday(6), 'day'));
 
-  const monthDays = startOfMonth.daysInMonth();
-  const numberOfDays = monthDays + daysFromSunday + daysInNextMonthFirstWeek;
+  const numberOfDays = daysInMonth(month) + daysFromSunday(month) + daysInNextMonthFirstWeek(month);
 
-  let firstNonDisabledDay: Dayjs;
-
-  const days = new Array(numberOfDays).fill(sunday).map((dayInMonth, index) => {
-    const day = dayjs(dayInMonth.add(index, 'day'));
+  const days = mapDates({ amount: numberOfDays, month }).map(({ d, i }) => {
+    const day = dateAdd(d, i, 'day');
 
     const range = !!start && !!end && dateIsBetween(day, start, end);
     const disabled = dateIsBefore(dateAdd(day, 1, 'day'), dayjs());
-
     const otherMonth = !dateIsSame(day, month, 'month');
-
-    if (firstNonDisabledDay === undefined && !disabled && !otherMonth) {
-      firstNonDisabledDay = day;
-    }
 
     return (
       <Day
         key={day?.toString()}
-        index={index}
+        index={i}
         day={day}
-        searchedStart={dateIsSame(day, start, 'day')}
-        searchedEnd={dateIsSame(day, end, 'day')}
+        searchedStart={start ? dateIsSame(day, start, 'day') : false}
+        searchedEnd={end ? dateIsSame(day, end, 'day') : false}
         range={range}
         onClickCalendarDay={onClickCalendarDay}
         disabled={disabled}
         otherMonth={otherMonth}
-        firstNonDisabledDay={firstNonDisabledDay}
+        today={dateIsSame(day, dayjs(), 'day')}
       />
     );
   });
-
   return <>{days}</>;
 };

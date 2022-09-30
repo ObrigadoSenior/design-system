@@ -5,7 +5,7 @@ import { dateAdd, dateFormat, dateIsBefore, dateIsSame, dateSubtract } from '../
 
 type UseHandleFocusProps = Pick<CalendarProps, 'onClickNextCalendarButton' | 'onClickPrevCalendarButton'>;
 
-export const useHandleFocus = ({
+export const useCalendarHandleFocus = ({
   onClickNextCalendarButton,
   onClickPrevCalendarButton,
 }: UseHandleFocusProps): { ulRef: RefObject<HTMLUListElement> } => {
