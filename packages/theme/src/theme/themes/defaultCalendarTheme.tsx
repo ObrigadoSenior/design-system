@@ -8,11 +8,12 @@ export const defaultCalendarTheme = ({ colors, sizes }: Required<ThemeDefaultPro
     bgColor: bg,
     borderColor: accent,
     color: primary,
-    gap: s,
-    maxWidth: '50vw',
-    monthPadding: s,
+    gap: xs,
+    maxWidth: '50%',
+    monthPadding: xs,
     padding: s,
     weekdayPadding: m,
+    borderRadius: m,
     day: {
       default: {
         borderRadius: xs,

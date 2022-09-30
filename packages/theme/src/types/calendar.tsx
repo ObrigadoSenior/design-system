@@ -10,6 +10,7 @@ type ThemeCalendarDefaultProps = ThemeCalendarDayDefaultProps & {
   gap: string;
   weekdayPadding: string;
   monthPadding: string;
+  borderRadius: string;
 };
 
 export type ThemeCalendarOtherMonthProps = ThemeCalendarDayDefaultProps;

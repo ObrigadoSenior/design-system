@@ -3,49 +3,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px solid red;
+  background-color: var(--calendar-day-default-bg-color);
+  border-radius: var(--calendar-day-default-border-radius);
+  border: var(--calendar-day-default-border);
   font-weight: 400;
-  height: 48px;
+  height: var(--calendar-day-default-height);
+  & + label {
+    color: var(--calendar-day-default-color);
+  }
   &.otherMonth {
-    opacity: 0.5;
+    background-color: var(--calendar-day-other-month-bg-color);
+    border-color: var(--calendar-day-other-month-border-color);
     & + label {
-      color: 'silver';
+      color: var(--calendar-day-other-month-color);
     }
   }
   &.searchedStart {
-    background-color: green;
-    color: white;
-    border-color: red;
+    background-color: var(--calendar-day-searched-start-bg-color);
+    color: var(--calendar-day-searched-start-color);
+    border-color: var(--calendar-day-searched-start-border-color);
     &:not(.searchedEnd) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
   &.searchedEnd {
-    background-color: red;
-    color: white;
-    border-color: red;
+    background-color: var(--calendar-day-searched-end-bg-color);
+    color: var(--calendar-day-searched-end-color);
+    border-color: var(--calendar-day-searched-end-border-color);
     &:not(.searchedStart) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
   }
   &.range {
-    background-color: pink;
+    background-color: var(--calendar-day-range-bg-color);
+    color: var(--calendar-day-range-color);
+    border-color: var(--calendar-day-range-border-color);
     margin: 0, -5px;
     border-radius: 0;
-    color: blue;
-    border-color: pink;
   }
   &.disabled {
     cursor: default;
     pointer-events: none;
-    opacity: 0.25;
+    background-color: var(--calendar-day-disabled-bg-color);
+    border-color: var(--calendar-day-disabled-border-color);
     & + label {
       cursor: default;
-      color: silver;
+      color: var(--calendar-day-disabled-color);
     }
   }
   & > label {
@@ -53,6 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--calendar-color);
   }
   & > input {
     position: absolute;

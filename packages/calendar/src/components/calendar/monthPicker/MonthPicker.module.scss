@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   & > .label {
-    padding: 20px;
+    padding: var(--calendar-month-padding);
     font-weight: 400;
   }
 }
