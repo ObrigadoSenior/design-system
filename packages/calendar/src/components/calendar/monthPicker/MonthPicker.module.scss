@@ -1,0 +1,10 @@
+.month_picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  & > .label {
+    padding: var(--calendar-month-padding);
+    font-weight: 400;
+  }
+}

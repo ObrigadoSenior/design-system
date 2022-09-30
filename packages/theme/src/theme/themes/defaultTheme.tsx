@@ -1,4 +1,5 @@
 import { ThemeDefaultProps, ThemeProps } from '../../types';
+import { defaultCalendarTheme } from './defaultCalendarTheme';
 import { defaultCoreTheme } from './defaultCoreTheme';
 import { defaultFormsTheme } from './defaultFormsTheme';
 import { defaultTerminalTheme } from './defaultTerminalTheme';
@@ -9,4 +10,5 @@ export const defaultTheme = (props: Required<ThemeDefaultProps>): ThemeProps => 
   core: defaultCoreTheme(props),
   forms: defaultFormsTheme(props),
   terminal: defaultTerminalTheme(props),
+  calendar: defaultCalendarTheme(props),
 });

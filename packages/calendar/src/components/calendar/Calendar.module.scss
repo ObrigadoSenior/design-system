@@ -1,0 +1,25 @@
+.month {
+  background-color: var(--calendar-bg-color);
+  border-radius: var(--calendar-border-radius);
+  width: 100%;
+  max-width: var(--calendar-max-width);
+  padding: var(--calendar-padding);
+  position: relative;
+  display: block;
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: var(--calendar-gap);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    & > li {
+      display: flex;
+      justify-content: center;
+      &.weekday {
+        padding: var(--calendar-weekday-padding);
+      }
+    }
+  }
+}
