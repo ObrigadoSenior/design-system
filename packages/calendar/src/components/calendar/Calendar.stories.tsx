@@ -6,7 +6,7 @@ import { Calendar as Cal } from '.';
 import { useCalendarDates } from './hooks/useCalendarDates';
 
 export default {
-  title: 'Forms/Calendar',
+  title: 'Calendar',
   component: Cal,
 } as ComponentMeta<typeof Cal>;
 

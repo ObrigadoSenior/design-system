@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { MonthPicker as MP } from '.';
 
 export default {
-  title: 'Forms/Calendar',
+  title: 'Calendar',
   component: MP,
 } as ComponentMeta<typeof MP>;
 
