@@ -1,4 +1,4 @@
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigadosenor/core';
 import React from 'react';
 import { CalendarWeekdaysProps } from '../../../types/components/calendar';
 import styles from '../Calendar.module.scss';

@@ -1,7 +1,7 @@
 {
-  "name": "@obrigadosenior/core",
+  "name": "@obrigadosenor/core",
   "version": "0.0.6",
-  "description": "Obrigado Senior Design System - Core",
+  "description": "Obrigado Señor Design System - Core",
   "author": "Johan Sjöberg",
   "license": "MIT",
   "main": "dist/index.js",

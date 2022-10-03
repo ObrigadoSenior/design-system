@@ -1,4 +1,4 @@
-import { AddTheme, darkPalette, defaultTheme, lightPalette, ThemeSizeProps } from '@obrigadosenior/theme';
+import { AddTheme, darkPalette, defaultTheme, lightPalette, ThemeSizeProps } from '@obrigadosenor/theme';
 
 const sizes: ThemeSizeProps = {
   none: `0`,

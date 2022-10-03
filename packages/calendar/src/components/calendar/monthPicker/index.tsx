@@ -1,4 +1,4 @@
-import { Button, Text } from '@obrigadosenior/core';
+import { Button, Text } from '@obrigadosenor/core';
 import dayjs from 'dayjs';
 import React from 'react';
 import { CalendarMonthPickerProps } from '../../../types/components/calendar';

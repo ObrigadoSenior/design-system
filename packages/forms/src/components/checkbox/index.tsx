@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import { CheckboxProps } from '../../types';
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigadosenor/core';
 import styles from './Checkbox.module.scss';
 
 export const Checkbox = ({ className = '', label, onChange, ...rest }: CheckboxProps): JSX.Element => {

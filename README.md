@@ -1,8 +1,8 @@
-# `Obrigado Senior Design System (STDS(?))`
+# `Obrigado Señor Design System (STDS(?))`
 
 ## `The foundation`
 
-Obrigado Senior Design System is created to uphold a common design with standardised functionality between projects.
+Obrigado Señor Design System is created to uphold a common design with standardised functionality between projects.
 
 The design system is built with react and html/css. Please be caution if adding new packages. Use bundlephobia to check package size and please think twice if YOU really need it. This helps a lot ot to keep the package size low and the threshold for other projects to use STDS(?).
 

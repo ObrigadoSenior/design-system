@@ -1,7 +1,7 @@
 {
-  "name": "@obrigadosenior/theme",
+  "name": "@obrigadosenor/theme",
   "version": "0.0.6",
-  "description": "Obrigado Senior Design System - Theme",
+  "description": "Obrigado Señor Design System - Theme",
   "author": "Johan Sjöberg",
   "license": "MIT",
   "main": "dist/index.js",

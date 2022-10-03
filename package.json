@@ -1,8 +1,8 @@
 {
-  "name": "obrigadosenior-design-system",
+  "name": "obrigado-senor-design-system",
   "private": true,
   "version": "0.0.8",
-  "description": "Obrigado Senior Design System (OSDS)",
+  "description": "Obrigado Señor Design System (OSDS)",
   "author": "Johan Sjöberg",
   "license": "MIT",
   "publishConfig": {

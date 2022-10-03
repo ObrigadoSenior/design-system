@@ -1,4 +1,4 @@
-import { TextProps } from '@obrigadosenior/core';
+import { TextProps } from '@obrigadosenor/core';
 import { CmdDataProps } from './terminal';
 
 export type TerminalTextBlockProps = {
