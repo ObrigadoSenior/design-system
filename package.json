@@ -1,7 +1,7 @@
 {
   "name": "obrigado-senor-design-system",
-  "private": true,
-  "version": "0.0.8",
+  "private": false,
+  "version": "0.0.10",
   "description": "Obrigado Señor Design System (OSDS)",
   "author": "Johan Sjöberg",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "clean-packages": "lerna run clean",
     "prod-build-packages": "yarn clean:packages && yarn build:packages && yarn clean:packages",
     "pre:build-check": "yarn prettier && yarn lint && yarn test:packages",
-    "publish": "lerna publish --exact --force-publish=*",
+    "publish": "lerna publish --exact --force-publish=* --access public",
     "publish-check": "yarn pre:build:check && yarn prod:build:packages && yarn publish",
     "lint": "lerna run lint --stream",
     "check-prettier": "prettier -l 'packages/**/src/**/*.{ts,tsx,mdx}' --ignore-path .gitignore",
