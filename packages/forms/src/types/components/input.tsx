@@ -1,4 +1,4 @@
-import { ButtonProps, IconProps } from '@obrigadosenior/core';
+import { ButtonProps, IconProps } from '@obrigado-senor/core';
 import { size } from '../../../../../utils';
 
 export type InputProps = {

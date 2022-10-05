@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof TP>;
 
 const Template: ComponentStory<typeof TP> = () => {
-  return <TP title="Obrigado Senior Developer" />;
+  return <TP title="Obrigado Señor Developer" />;
 };
 
 export const TopPanel = Template.bind({});

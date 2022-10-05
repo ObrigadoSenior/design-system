@@ -1,4 +1,4 @@
-import { Text as OSText } from '@obrigadosenior/core';
+import { Text as OSText } from '@obrigado-senor/core';
 import cx from 'classnames';
 import { map } from 'ramda';
 import React, { useEffect, useState } from 'react';

@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import { RadioProps } from '../../types';
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigado-senor/core';
 import styles from './Radio.module.scss';
 
 export const Radio = ({ className = '', label, onChange, ...rest }: RadioProps): JSX.Element => {

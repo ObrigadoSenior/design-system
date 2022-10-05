@@ -9,7 +9,7 @@ import styles from './Terminal.module.scss';
 export const Terminal = (props: TerminalProps): JSX.Element => {
   return (
     <div className={styles.terminal}>
-      <TopPanel title="Obrigado Senior Developer" />
+      <TopPanel title="Obrigado Señor Developer" />
       <Content {...props} />
     </div>
   );

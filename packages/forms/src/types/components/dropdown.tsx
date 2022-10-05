@@ -1,4 +1,4 @@
-import { IconProps } from '@obrigadosenior/core';
+import { IconProps } from '@obrigado-senor/core';
 import { InputProps } from './input';
 
 export type DropdownOptionProps = {

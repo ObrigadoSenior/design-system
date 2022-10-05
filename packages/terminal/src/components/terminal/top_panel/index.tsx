@@ -1,4 +1,4 @@
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigado-senor/core';
 import React from 'react';
 import { TerminalTopPanelProps } from '../../../types/components/topPanel';
 

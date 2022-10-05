@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import { DropdownOptionProps, DropdownOptionsProps } from '../../types/components/dropdown';
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigado-senor/core';
 import styles from './Dropdown.module.scss';
 
 export const DropdownOption = ({

@@ -1,7 +1,7 @@
 {
-  "name": "@obrigadosenior/calendar",
-  "version": "0.0.7",
-  "description": "Obrigado Senior Design System - Calendar",
+  "name": "@obrigado-senor/calendar",
+  "version": "0.0.6",
+  "description": "Obrigado Señor Design System - Calendar",
   "author": "Johan Sjöberg",
   "license": "MIT",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@obrigadosenior/core": "0.0.7"
+    "@obrigado-senor/core": "0.0.7"
   },
   "peerDependencies": {
     "react": ">=16.8.6",

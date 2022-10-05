@@ -1,4 +1,4 @@
-import { Text } from '@obrigadosenior/core';
+import { Text } from '@obrigado-senor/core';
 import cn from 'classnames';
 import React from 'react';
 import { CalendarDayProps } from '../../../types/components/calendar';

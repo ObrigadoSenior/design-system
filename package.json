@@ -1,8 +1,8 @@
 {
-  "name": "obrigadosenior-design-system",
+  "name": "obrigado-senor-design-system",
   "private": true,
-  "version": "0.0.8",
-  "description": "Obrigado Senior Design System (OSDS)",
+  "version": "0.0.6",
+  "description": "Obrigado Señor Design System (OSDS)",
   "author": "Johan Sjöberg",
   "license": "MIT",
   "publishConfig": {
@@ -22,10 +22,10 @@
   "scripts": {
     "build-packages": "lerna run build",
     "clean-packages": "lerna run clean",
-    "prod-build-packages": "yarn clean:packages && yarn build:packages && yarn clean:packages",
-    "pre:build-check": "yarn prettier && yarn lint && yarn test:packages",
+    "prod-build-packages": "yarn clean-packages && yarn build-packages && yarn clean-packages",
+    "pre-build-check": "yarn prettier && yarn lint && yarn test-packages",
     "publish": "lerna publish --exact --force-publish=*",
-    "publish-check": "yarn pre:build:check && yarn prod:build:packages && yarn publish",
+    "publish-check": "yarn pre-build-check && yarn prod:build-packages && yarn publish",
     "lint": "lerna run lint --stream",
     "check-prettier": "prettier -l 'packages/**/src/**/*.{ts,tsx,mdx}' --ignore-path .gitignore",
     "prettier": "prettier --write 'packages/**/src/**/*.{ts,tsx,mdx}' --ignore-path .gitignore",
